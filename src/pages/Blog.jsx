@@ -308,7 +308,7 @@ const blogPosts = [
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-green-600">
+      {/* <section className="py-16 bg-green-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-4">
             Stay Updated
@@ -327,7 +327,7 @@ const blogPosts = [
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

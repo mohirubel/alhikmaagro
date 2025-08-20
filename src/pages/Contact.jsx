@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-green-600" />,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 123-4568'],
+      details: ['+880 1716 592102', '+61 402 647 138'],
       description: 'Mon-Fri 8:00 AM - 6:00 PM'
     },
     {
@@ -61,7 +61,7 @@ const Contact = () => {
     {
       icon: <MessageSquare className="h-6 w-6 text-green-600" />,
       title: 'WhatsApp Business',
-      details: ['+1 (555) 123-4569'],
+      details: ['+880 1716 592102'],
       description: 'Quick support and inquiries'
     }
   ]

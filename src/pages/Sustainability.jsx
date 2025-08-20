@@ -85,7 +85,7 @@ const Sustainability = () => {
   const impactStats = [
     { number: '50,000', unit: 'Tons CO₂', description: 'Reduced annually' },
     { number: '500+', unit: 'Farmers', description: 'Supported globally' },
-    { number: '1M+', unit: 'Acres', description: 'Under sustainable practices' },
+    { number: '30', unit: 'Acres', description: 'Under sustainable practices' },
     { number: '25%', unit: 'Reduction', description: 'In water usage' }
   ]
 
@@ -265,7 +265,7 @@ const Sustainability = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-green-600">
+      {/* <section className="py-16 bg-green-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-4">
             Join Our Sustainability Journey
@@ -282,7 +282,7 @@ const Sustainability = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

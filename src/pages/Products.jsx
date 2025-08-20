@@ -384,11 +384,11 @@ const Products = () => {
                           Organic
                         </Badge>
                       )}
-                      {!product.inStock && (
+                      {/* {!product.inStock && (
                         <Badge variant="destructive" className="text-xs">
                           Out of Stock
                         </Badge>
-                      )}
+                      )} */}
                     </div>
                     <div className="absolute top-3 right-3">
                       <div className="bg-white rounded-full p-1 shadow-lg">
@@ -405,40 +405,34 @@ const Products = () => {
                       <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
                         {product.name}
                       </h3>
-                      <span className="text-lg font-bold text-green-600">{product.price}</span>
+                      {/* <span className="text-lg font-bold text-green-600">{product.price}</span> */}
                     </div>
                     
                     <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                       {product.description}
                     </p>
                     
-                    <div className="flex items-center justify-between mb-3">
+                    {/* <div className="flex items-center justify-between mb-3">
                       <span className="text-xs text-gray-500">Origin: {product.origin}</span>
                       {product.featured && (
                         <Award className="h-4 w-4 text-yellow-500" />
                       )}
-                    </div>
+                    </div> */}
                     
                     <div className="flex gap-2">
                       <Button 
                         size="sm" 
                         className="flex-1 bg-green-600 hover:bg-green-700 text-xs"
                         onClick={() => handlePurchase(product.purchaseUrl)}
-                        disabled={!product.inStock}
+                        // disabled={!product.inStock}
                       >
-                        {product.inStock ? (
-                          <>
                             <ShoppingCart className="h-3 w-3 mr-1" />
-                            Buy Now
+                            View More
                             <ExternalLink className="h-3 w-3 ml-1" />
-                          </>
-                        ) : (
-                          'Out of Stock'
-                        )}
                       </Button>
-                      <Button variant="outline" size="sm">
+                      {/* <Button variant="outline" size="sm">
                         <Eye className="h-3 w-3" />
-                      </Button>
+                      </Button> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -458,7 +452,7 @@ const Products = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-green-600">
+      {/*<section className="py-16 bg-green-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-4">
             Need Custom Solutions?
@@ -475,7 +469,7 @@ const Products = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
