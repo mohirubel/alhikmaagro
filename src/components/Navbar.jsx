@@ -1,22 +1,37 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Leaf } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useTranslation } from 'react-i18next'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  const { t, i18n } = useTranslation()
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Products', path: '/products' },
-    { name: 'Sustainability', path: '/sustainability' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.products'), path: '/products' },
+    { name: t('nav.sustainability'), path: '/sustainability' },
+    { name: t('nav.blog'), path: '/blog' },
+    { name: t('nav.contact'), path: '/contact' }
   ]
 
   const isActive = (path) => location.pathname === path
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+    localStorage.setItem("lang", lng); 
+  }
+
+    useEffect(() => {
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
+
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -26,12 +41,12 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <Leaf className="h-8 w-8 text-green-600" />
-              <span className="text-xl font-bold text-gray-900">Al Hikma Agro</span>
+              <span className="text-xl font-bold text-gray-900">{t('brand')}</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -45,6 +60,24 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+
+            {/* Language Switch */}
+            <div className="flex space-x-2">
+              <Button
+                variant={i18n.language === 'en' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => changeLanguage('en')}
+              >
+                {t('lang.en')}
+              </Button>
+              <Button
+                variant={i18n.language === 'bn' ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => changeLanguage('bn')}
+              >
+                {t('lang.bn')}
+              </Button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -78,6 +111,24 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+
+              {/* Mobile Language Switch */}
+              <div className="flex space-x-2 mt-3">
+                <Button
+                  variant={i18n.language === 'en' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => changeLanguage('en')}
+                >
+                  {t('lang.en')}
+                </Button>
+                <Button
+                  variant={i18n.language === 'bn' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => changeLanguage('bn')}
+                >
+                  {t('lang.bn')}
+                </Button>
+              </div>
             </div>
           </div>
         )}
@@ -87,4 +138,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "sustainability": "Sustainability",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+
+  "brand": "Al Hikma Agro",
+
+  "lang": {
+    "en": "English",
+    "bn": "বাংলা"
+  },
+
+  "home": {
+    "hero": {
+      "title": "Premium Agricultural Products",
+      "subtitle": "Connecting farms to markets with quality grains, seeds, fruits, and vegetables. Your trusted partner in sustainable agriculture.",
+      "exploreBtn": "Explore Our Products",
+      "learnBtn": "Learn More"
+    },
+    "intro": {
+      "title": "Who We Are",
+      "description": "Al Hikma Agro is a leading agricultural products company dedicated to providing premium quality grains, seeds, fruits, and vegetables to customers worldwide. With years of experience and a commitment to sustainable farming practices, we bridge the gap between farmers and global markets."
+    },
+    "features": {
+      "sustainable": {
+        "title": "Sustainable Farming",
+        "desc": "Committed to eco-friendly agricultural practices"
+      },
+      "quality": {
+        "title": "Quality Assured",
+        "desc": "Rigorous quality control and certification processes"
+      },
+      "global": {
+        "title": "Global Reach",
+        "desc": "Serving customers worldwide with reliable supply chains"
+      },
+      "leader": {
+        "title": "Industry Leader",
+        "desc": "Recognized excellence in agricultural product distribution"
+      }
+    },
+    "products": {
+      "title": "Featured Products",
+      "subtitle": "Discover our premium selection of agricultural products",
+      "viewDetails": "View Details",
+      "viewAll": "View All Products"
+    }
+  },
+
+  "featuredProducts": [
+    {
+      "id": 1,
+      "name": "Premium Wheat",
+      "category": "Grains",
+      "description": "High-quality wheat grains perfect for flour production",
+      "image": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Organic Rice",
+      "category": "Grains",
+      "description": "Certified organic rice with superior taste and nutrition",
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Fresh Tomatoes",
+      "category": "Vegetables",
+      "description": "Farm-fresh tomatoes packed with flavor and nutrients",
+      "image": "https://cdn.mos.cms.futurecdn.net/6ct8VbpM7PtB2JdiqCMicQ.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Corn Seeds",
+      "category": "Seeds",
+      "description": "High-yield corn seeds for optimal crop production",
+      "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Organic Apples",
+      "category": "Fruits",
+      "description": "Crisp, sweet organic apples grown with care",
+      "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300&h=200&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Bio Fertilizer",
+      "category": "Fertilizers",
+      "description": "Eco-friendly fertilizer for sustainable farming",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop"
+    }
+  ],
+
+  "company": {
+    "name": "Al Hikma Agro",
+    "description": "Leading provider of premium agricultural products, committed to sustainable farming practices and delivering quality grains, seeds, fruits, and vegetables worldwide.",
+    "social": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#"
+    }
+  },
+  "quickLinks": [
+    { "name": "Home", "path": "/" },
+    { "name": "About Us", "path": "/about" },
+    { "name": "Products", "path": "/products" },
+    { "name": "Sustainability", "path": "/sustainability" },
+    { "name": "Blog", "path": "/blog" }
+  ],
+  "contact": {
+    "phone": "+880 1716 592102",
+    "email": "info@alhikmaagro.com",
+    "address": "Nobgram (Beside Nimtola Bazar), Ward No. 3, Dhanshiri Union, Kabirhat, Noakhali."
+  },
+  "copyright": "© 2025 Al Hikma Agro. All rights reserved. | Privacy Policy | Terms of Service"
+
+}
