@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react'
+import CallInAction from '@/components/Common/CallInAction'
 
 const Contact = () => {
   const { t } = useTranslation()
@@ -90,17 +91,7 @@ const offices = [
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-700 to-green-500 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            {t('contactPage.heroTitle')}
-          </h1>
-          <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            {t('contactPage.heroSubtitle')}
-          </p>
-        </div>
-      </section>
+      <CallInAction title={t('contactPage.heroTitle')} subTitle={t('contactPage.heroSubtitle')}/>
 
       {/* Contact Form and Info */}
       <section className="py-16 bg-white">

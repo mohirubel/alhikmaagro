@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Calendar, User, ArrowRight, Search } from 'lucide-react'
+import CallInAction from '@/components/Common/CallInAction'
 
 const Blog = () => {
   const { t } = useTranslation()
@@ -133,15 +134,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-700 to-green-500 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">{t('blog.hero.title')}</h1>
-          <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            {t('blog.hero.subtitle')}
-          </p>
-        </div>
-      </section>
+      <CallInAction title={t('blog.hero.title')} subTitle={t('blog.hero.subtitle')}/>
 
       {/* Search and Filter */}
       <section className="py-8 bg-white border-b">

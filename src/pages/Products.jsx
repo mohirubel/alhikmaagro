@@ -15,6 +15,7 @@ import {
   Eye,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import CallInAction from "@/components/Common/CallInAction";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -237,27 +238,17 @@ const Products = () => {
         return 0;
     }
   });
-  console.log(filteredProducts);
+  
   const featuredProducts = products.filter((product) => product.featured);
 
   const handlePurchase = (url) => {
     // window.open(url, '_blank')
     navigate("/details");
   };
-
+  
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-700 to-green-500 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            {t("product-hero.title")}
-          </h1>
-          <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            {t("product-hero.subtitle")}
-          </p>
-        </div>
-      </section>
+      <CallInAction title={t("product-hero.title")} subTitle={t("product-hero.subtitle")}/>
 
       {/* Featured Products */}
       <section className="py-16 bg-gray-50">
@@ -308,9 +299,9 @@ const Products = () => {
                     <h3 className="text-xl font-semibold text-gray-900">
                       {product.name}
                     </h3>
-                    <span className="text-lg font-bold text-green-600">
+                    {/* <span className="text-lg font-bold text-green-600">
                       {product.price}
-                    </span>
+                    </span> */}
                   </div>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <div className="flex gap-2">

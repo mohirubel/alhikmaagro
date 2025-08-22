@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               {/* <Leaf className="h-8 w-8 text-green-600" /> */}
-              <img src='/alhikma-logo.png' alt='logo' className='h-16'/>
+              <img src='/alhikma-logo.png' alt='logo' className='h-12 md:h-16'/>
               {/* <span className="text-2xl font-bold text-gray-900">Al Hikma Agro</span> */}
             </Link>
           </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-10 w-10" /> : <Menu className="h-10 w-10" />}
             </Button>
           </div>
         </div>

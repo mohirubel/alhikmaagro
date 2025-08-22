@@ -48,29 +48,29 @@
       "viewAll": "View All Products"
     }
   },
-  "featuredProducts": [
-    {
-      "id": 3,
-      "name": "Fresh Tomatoes",
-      "category": "Vegetables",
-      "description": "Farm-fresh tomatoes packed with flavor and nutrients",
-      "image": "https://cdn.mos.cms.futurecdn.net/6ct8VbpM7PtB2JdiqCMicQ.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Corn Seeds",
-      "category": "Seeds",
-      "description": "High-yield corn seeds for optimal crop production",
-      "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=300&h=200&fit=crop"
-    },
-    {
-      "id": 6,
-      "name": "Bio Fertilizer",
-      "category": "Fertilizers",
-      "description": "Eco-friendly fertilizer for sustainable farming",
-      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop"
-    }
-  ],
+"featuredProducts": [
+  {
+    "id": 1,
+    "name": "Organic Vegetables",
+    "category": "Vegetables",
+    "description": "Organic Vegetables are grown naturally without the use of harmful pesticides, chemical fertilizers, or genetically modified seeds. Cultivated in healthy soil with sustainable farming practices, they are rich in nutrients, full of natural flavor, and safe for the whole family. Our organic vegetables are harvested fresh from the farm, ensuring quality, purity, and the goodness of nature in every bite. By choosing organic, you not only care for your health but also support eco-friendly farming that protects the environment.",
+    "image": "https://cdn.mos.cms.futurecdn.net/6ct8VbpM7PtB2JdiqCMicQ.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Organic Cattle Farm",
+    "category": "Livestock",
+    "description": "Organic Cattle Farm is dedicated to raising healthy, grass-fed cows in a natural and sustainable environment. Our cattle are nurtured with care, free from harmful chemicals, hormones, and antibiotics. We believe in pure farming practices that protect nature, ensure animal well-being, and deliver high-quality organic dairy and meat products. With fresh green pastures and a commitment to sustainability, we bring you the true taste of nature—safe, nutritious, and wholesome.",
+    "image": "https://smallfarms.cornell.edu/wp-content/uploads/2020/01/SFQ-organic-dairy-cows-grazing-scaled.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Organic Fruits",
+    "category": "Fruits",
+    "description": "Our Organic Fruits are grown with love and care in fertile orchards, without synthetic pesticides, chemical fertilizers, or artificial ripening agents. Fresh, juicy, and naturally sweet, they are packed with essential vitamins, minerals, and antioxidants. From mangoes to papayas, bananas to guavas, each fruit is handpicked at peak ripeness to ensure the best flavor and nutrition. Choosing our organic fruits means choosing health, freshness, and the pure goodness of nature.",
+    "image": "https://cdn.britannica.com/84/22184-050-963C9964/Mango.jpg"
+  }
+],
   "company": {
     "name": "Al Hikma Agro",
     "description": "Leading provider of premium agricultural products, committed to sustainable farming practices and delivering quality grains, seeds, fruits, and vegetables worldwide.",

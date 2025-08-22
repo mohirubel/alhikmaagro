@@ -15,13 +15,14 @@ import Sustainability from './pages/Sustainability'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import ProductPage from './pages/ProductPage'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background">
+      <div className="flex flex-col min-h-screen bg-background">
         <Navbar />
-        <main>
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/details" element={<ProductPage />} />
@@ -30,6 +31,7 @@ function App() {
             <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
           </Routes>
         </main>
         <Footer />
