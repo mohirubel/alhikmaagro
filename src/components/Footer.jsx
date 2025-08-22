@@ -15,8 +15,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Leaf className="h-8 w-8 text-green-500" />
-              <span className="text-xl font-bold">{company.name}</span>
+              {/* <Leaf className="h-8 w-8 text-green-500" /> */}
+              <img src='/alhikma-logo.png' alt='logo' className='h-8'/>
+              <span className="text-xl font-bold">Al Hikma Agro</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">{company.description}</p>
             <div className="flex space-x-4">

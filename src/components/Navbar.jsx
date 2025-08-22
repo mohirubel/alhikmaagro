@@ -36,22 +36,23 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-green-600" />
-              <span className="text-xl font-bold text-gray-900">{t('brand')}</span>
+              {/* <Leaf className="h-8 w-8 text-green-600" /> */}
+              <img src='/alhikma-logo.png' alt='logo' className='h-16'/>
+              <span className="text-2xl font-bold text-gray-900">Al Hikma Agro</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-3.5">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md font-medium transition-colors ${
                   isActive(item.path)
                     ? 'text-green-600 bg-green-50'
                     : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
@@ -62,11 +63,12 @@ const Navbar = () => {
             ))}
 
             {/* Language Switch */}
-            <div className="flex space-x-2">
+            <div className="flex space-x-1">
               <Button
                 variant={i18n.language === 'en' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => changeLanguage('en')}
+                className="cursor-pointer"
               >
                 {t('lang.en')}
               </Button>
@@ -74,6 +76,7 @@ const Navbar = () => {
                 variant={i18n.language === 'bn' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => changeLanguage('bn')}
+                className="cursor-pointer"
               >
                 {t('lang.bn')}
               </Button>
@@ -113,11 +116,12 @@ const Navbar = () => {
               ))}
 
               {/* Mobile Language Switch */}
-              <div className="flex space-x-2 mt-3">
+              <div className="flex space-x-1 mt-3">
                 <Button
                   variant={i18n.language === 'en' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => changeLanguage('en')}
+                  className="cursor-pointer"
                 >
                   {t('lang.en')}
                 </Button>
@@ -125,6 +129,7 @@ const Navbar = () => {
                   variant={i18n.language === 'bn' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => changeLanguage('bn')}
+                  className="cursor-pointer"
                 >
                   {t('lang.bn')}
                 </Button>

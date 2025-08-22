@@ -114,10 +114,12 @@ const Home = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.name}</h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
-                  <Button variant="outline" className="w-full group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <Link to='/details'>
+                <Button variant="outline" className="w-full group-hover:bg-green-600 group-hover:text-white transition-colors">
                     {t('home.products.viewDetails')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

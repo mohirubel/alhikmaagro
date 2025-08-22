@@ -14,6 +14,7 @@ import Products from './pages/Products'
 import Sustainability from './pages/Sustainability'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
+import ProductPage from './pages/ProductPage'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/details" element={<ProductPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/sustainability" element={<Sustainability />} />
