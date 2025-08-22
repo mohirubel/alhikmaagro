@@ -42,7 +42,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-2">
               {/* <Leaf className="h-8 w-8 text-green-600" /> */}
               <img src='/alhikma-logo.png' alt='logo' className='h-16'/>
-              <span className="text-2xl font-bold text-gray-900">Al Hikma Agro</span>
+              {/* <span className="text-2xl font-bold text-gray-900">Al Hikma Agro</span> */}
             </Link>
           </div>
 

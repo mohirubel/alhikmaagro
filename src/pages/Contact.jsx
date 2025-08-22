@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -7,6 +8,7 @@ import { Label } from '@/components/ui/label'
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,9 +28,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
     console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
+    alert(t('contactPage.thankYou'))
     setFormData({
       name: '',
       email: '',
@@ -42,60 +43,61 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6 text-green-600" />,
-      title: 'Phone',
+      title: t('contactPage.phone'),
       details: ['+880 1716 592102', '+61 402 647 138'],
-      description: 'Mon-Fri 8:00 AM - 6:00 PM'
+      description: t('contactPage.phoneDesc')
     },
     {
       icon: <Mail className="h-6 w-6 text-green-600" />,
-      title: 'Email',
+      title: t('contactPage.email'),
       details: ['info@alhikmaagro.com', 'sales@alhikmaagro.com'],
-      description: 'We respond within 24 hours'
+      description: t('contactPage.emailDesc')
     },
     {
       icon: <MapPin className="h-6 w-6 text-green-600" />,
-      title: 'Address',
-      details: ['Hasan Villa', 'Muktijodda Road, Uttara', 'Dhaka, Bangladesh'],
-      description: 'Visit our headquarters'
+      title: t('contactPage.address'),
+      details: t('contactPage.addressDetails', { returnObjects: true }),
+      description: t('contactPage.addressDesc')
     },
     {
       icon: <MessageSquare className="h-6 w-6 text-green-600" />,
-      title: 'WhatsApp Business',
+      title: t('contactPage.whatsapp'),
       details: ['+880 1716 592102'],
-      description: 'Quick support and inquiries'
+      description: t('contactPage.whatsappDesc')
     }
   ]
 
-  const offices = [
-    {
-      name: 'Headquarters - USA',
-      address: '123 Agricultural District, Green Valley, State 12345',
-      phone: '+1 (555) 123-4567',
-      email: 'usa@alhikmaagro.com'
-    },
-    {
-      name: 'European Office - Netherlands',
-      address: 'Agro Business Park 45, 2685 DB Den Haag',
-      phone: '+31 70 123 4567',
-      email: 'europe@alhikmaagro.com'
-    },
-    {
-      name: 'Asian Office - Singapore',
-      address: '1 Marina Bay, Singapore 018989',
-      phone: '+65 6123 4567',
-      email: 'asia@alhikmaagro.com'
-    }
-  ]
+const offices = [
+  {
+    name: t('contactPage.hq'),
+    address: t('contactPage.hqAddress'),
+    phone: '+1 (555) 123-4567',
+    email: 'usa@alhikmaagro.com'
+  },
+  {
+    name: t('contactPage.europe'),
+    address: t('contactPage.europeAddress'),
+    phone: '+31 70 123 4567',
+    email: 'europe@alhikmaagro.com'
+  },
+  {
+    name: t('contactPage.asia'),
+    address: t('contactPage.asiaAddress'),
+    phone: '+65 6123 4567',
+    email: 'asia@alhikmaagro.com'
+  }
+]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-700 to-green-500 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">
+            {t('contactPage.heroTitle')}
+          </h1>
           <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            Get in touch with our team for partnerships, inquiries, or support. 
-            We're here to help you with all your agricultural product needs.
+            {t('contactPage.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -109,17 +111,17 @@ const Contact = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-gray-900 mt-3">
-                    Send us a Message
+                    {t('contactPage.formTitle')}
                   </CardTitle>
-                  <p className="text-gray-600">
-                    Fill out the form below and we'll get back to you as soon as possible.
-                  </p>
+                  <p className="text-gray-600">{t('contactPage.formSubtitle')}</p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name" className='mb-2'>Full Name *</Label>
+                        <Label htmlFor="name" className="mb-2">
+                          {t('contactPage.fullName')}
+                        </Label>
                         <Input
                           id="name"
                           name="name"
@@ -127,12 +129,14 @@ const Contact = () => {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="Your full name"
+                          placeholder={t('contactPage.placeholderFullName')}
                           className="mb-2"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email" className='mb-2'>Email Address *</Label>
+                        <Label htmlFor="email" className="mb-2">
+                          {t('contactPage.emailAddress')}
+                        </Label>
                         <Input
                           id="email"
                           name="email"
@@ -140,38 +144,44 @@ const Contact = () => {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="your.email@example.com"
+                          placeholder={t('contactPage.placeholderEmail')}
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="company" className='mb-2'>Company</Label>
+                        <Label htmlFor="company" className="mb-2">
+                          {t('contactPage.company')}
+                        </Label>
                         <Input
                           id="company"
                           name="company"
                           type="text"
                           value={formData.company}
                           onChange={handleInputChange}
-                          placeholder="Your company name"
+                          placeholder={t('contactPage.placeholderCompany')}
                         />
                       </div>
                       <div>
-                        <Label htmlFor="phone" className='mb-2'>Phone Number</Label>
+                        <Label htmlFor="phone" className="mb-2">
+                          {t('contactPage.phoneNumber')}
+                        </Label>
                         <Input
                           id="phone"
                           name="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          placeholder="+1 (555) 123-4567"
+                          placeholder={t('contactPage.placeholderPhone')}
                         />
                       </div>
                     </div>
 
                     <div>
-                      <Label htmlFor="subject" className='mb-2'>Subject *</Label>
+                      <Label htmlFor="subject" className="mb-2">
+                        {t('contactPage.subject')}
+                      </Label>
                       <Input
                         id="subject"
                         name="subject"
@@ -179,12 +189,14 @@ const Contact = () => {
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        placeholder="What is this regarding?"
+                        placeholder={t('contactPage.placeholderSubject')}
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="message" className='mb-2'>Message *</Label>
+                      <Label htmlFor="message" className="mb-2">
+                        {t('contactPage.message')}
+                      </Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -192,12 +204,12 @@ const Contact = () => {
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Please provide details about your inquiry..."
+                        placeholder={t('contactPage.placeholderMessage')}
                       />
                     </div>
 
                     <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 mb-3">
-                      Send Message
+                      {t('contactPage.sendMessage')}
                     </Button>
                   </form>
                 </CardContent>
@@ -207,13 +219,13 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  {t('contactPage.getInTouch')}
+                </h2>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        {info.icon}
-                      </div>
+                      <div className="flex-shrink-0">{info.icon}</div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 mb-1">
                           {info.title}
@@ -232,46 +244,45 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <Card>
-              <CardContent className="p-0">
-                <div className="h-64 w-full rounded-lg overflow-hidden">
-                  <iframe
-                    title="Company Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.567432779364!2d90.41251891543268!3d23.810331384555846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7abf3dbb8c3%3A0xa563f0db14e63bf3!2sGreen%20Valley!5e0!3m2!1sen!2sbd!4v1692567890123!5m2!1sen!2sbd"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </CardContent>
-            </Card>
-
+                <CardContent className="p-0">
+                  <div className="h-64 w-full rounded-lg overflow-hidden">
+                    <iframe
+                      title="Company Location"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.567432779364!2d90.41251891543268!3d23.810331384555846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7abf3dbb8c3%3A0xa563f0db14e63bf3!2sGreen%20Valley!5e0!3m2!1sen!2sbd!4v1692567890123!5m2!1sen!2sbd"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Business Hours */}
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center mt-3">
                     <Clock className="h-5 w-5 text-green-600 mr-2" />
-                    Business Hours
+                    {t('contactPage.businessHours')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 mb-3">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Monday - Friday</span>
+                      <span className="text-gray-600">{t('contactPage.mondayFriday')}</span>
                       <span className="font-medium">8:00 AM - 6:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Saturday</span>
+                      <span className="text-gray-600">{t('contactPage.saturday')}</span>
                       <span className="font-medium">9:00 AM - 4:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Sunday</span>
-                      <span className="font-medium">Closed</span>
+                      <span className="text-gray-600">{t('contactPage.sunday')}</span>
+                      <span className="font-medium">{t('contactPage.closed')}</span>
                     </div>
                   </div>
                 </CardContent>
@@ -285,10 +296,10 @@ const Contact = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Global Offices</h2>
-            <p className="text-xl text-gray-600">
-              We have offices worldwide to serve you better
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              {t('contactPage.globalOffices')}
+            </h2>
+            <p className="text-xl text-gray-600">{t('contactPage.globalOfficesSubtitle')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -301,21 +312,15 @@ const Contact = () => {
                   <div className="space-y-3">
                     <div className="flex items-start space-x-2">
                       <MapPin className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-600 text-sm">
-                        {office.address}
-                      </p>
+                      <p className="text-gray-600 text-sm">{office.address}</p>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Phone className="h-4 w-4 text-green-600" />
-                      <p className="text-gray-600 text-sm">
-                        {office.phone}
-                      </p>
+                      <p className="text-gray-600 text-sm">{office.phone}</p>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="h-4 w-4 text-green-600" />
-                      <p className="text-gray-600 text-sm">
-                        {office.email}
-                      </p>
+                      <p className="text-gray-600 text-sm">{office.email}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -329,4 +334,3 @@ const Contact = () => {
 }
 
 export default Contact
-

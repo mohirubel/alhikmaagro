@@ -27,27 +27,15 @@ const team = [
   {
     name: t('about.team.ceo.name'),
     position: t('about.team.ceo.position'),
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCf0rxKDdJgWsb7jnU1Who9RZz8zO_aEVksoLXum6L2fjJfoUoxp22Y60UvTjwmHDHug&usqp=CAU',
     description: t('about.team.ceo.desc'),
   },
   {
     name: t('about.team.ops.name'),
     position: t('about.team.ops.position'),
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCf0rxKDdJgWsb7jnU1Who9RZz8zO_aEVksoLXum6L2fjJfoUoxp22Y60UvTjwmHDHug&usqp=CAU',
     description: t('about.team.ops.desc'),
-  },
-  {
-    name: t('about.team.qa.name'),
-    position: t('about.team.qa.position'),
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
-    description: t('about.team.qa.desc'),
-  },
-  {
-    name: t('about.team.sus.name'),
-    position: t('about.team.sus.position'),
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
-    description: t('about.team.sus.desc'),
-  },
+  }
 ]
 
 
@@ -171,7 +159,7 @@ const team = [
           <h2 className="text-4xl font-bold">{t('about.team.title')}</h2>
           <p className="text-xl text-gray-600">{t('about.team.subtitle')}</p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-2 gap-4 md:gap-10 max-w-3xl mx-auto px-4">
           {team.map((member, i) => (
             <Card key={i} className="text-center">
               <CardContent className="p-6">

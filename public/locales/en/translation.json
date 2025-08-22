@@ -7,14 +7,11 @@
     "blog": "Blog",
     "contact": "Contact"
   },
-
   "brand": "Al Hikma Agro",
-
   "lang": {
     "en": "English",
     "bn": "বাংলা"
   },
-
   "home": {
     "hero": {
       "title": "Premium Agricultural Products",
@@ -51,7 +48,6 @@
       "viewAll": "View All Products"
     }
   },
-
   "featuredProducts": [
     {
       "id": 3,
@@ -75,7 +71,6 @@
       "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop"
     }
   ],
-
   "company": {
     "name": "Al Hikma Agro",
     "description": "Leading provider of premium agricultural products, committed to sustainable farming practices and delivering quality grains, seeds, fruits, and vegetables worldwide.",
@@ -164,23 +159,13 @@
       "subtitle": "Meet the experts driving our mission forward",
       "ceo": {
         "name": "Ahmed Al-Hikma",
-        "position": "CEO & Founder",
+        "position": "Project Manager",
         "desc": "20+ years experience in agricultural business and sustainable farming practices."
       },
       "ops": {
         "name": "Sarah Johnson",
-        "position": "Head of Operations",
+        "position": "Fisheries and Aquaculture Manager",
         "desc": "Expert in supply chain management and international trade operations."
-      },
-      "qa": {
-        "name": "Dr. Michael Chen",
-        "position": "Quality Assurance Director",
-        "desc": "PhD in Agricultural Sciences with focus on food safety and quality control."
-      },
-      "sus": {
-        "name": "Maria Rodriguez",
-        "position": "Sustainability Manager",
-        "desc": "Leading our environmental initiatives and sustainable farming programs."
       }
     }
   },
@@ -426,6 +411,57 @@
       "name": "Grass-Fed Beef",
       "desc": "Premium grass-fed beef from pasture-raised cattle. No hormones or antibiotics, rich marbling and exceptional taste."
     }
-  }
+  },
+  "contactPage": {
+    "heroTitle": "Contact Us",
+    "heroSubtitle": "Get in touch with our team for partnerships, inquiries, or support. We're here to help you with all your agricultural product needs.",
 
+    "formTitle": "Send us a Message",
+    "formSubtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+    "fullName": "Full Name *",
+    "emailAddress": "Email Address *",
+    "company": "Company",
+    "phoneNumber": "Phone Number",
+    "subject": "Subject *",
+    "message": "Message *",
+    "placeholderFullName": "Your full name",
+    "placeholderEmail": "your.email@example.com",
+    "placeholderCompany": "Your company name",
+    "placeholderPhone": "+1 (555) 123-4567",
+    "placeholderSubject": "What is this regarding?",
+    "placeholderMessage": "Please provide details about your inquiry...",
+    "sendMessage": "Send Message",
+
+    "getInTouch": "Get in Touch",
+    "businessHours": "Business Hours",
+    "mondayFriday": "Monday - Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+
+    "phone": "Phone",
+    "phoneDesc": "Mon-Fri 8:00 AM - 6:00 PM",
+    "email": "Email",
+    "emailDesc": "We respond within 24 hours",
+    "address": "Address",
+    "addressDesc": "Visit our headquarters",
+    "whatsapp": "WhatsApp Business",
+    "whatsappDesc": "Quick support and inquiries",
+    "addressDetails": [
+      "Nobgram (Beside Nimtola Bazar)",
+      "Ward No. 3, Dhanshiri Union",
+      "Kabirhat, Noakhali."
+    ],
+
+    "globalOffices": "Our Global Offices",
+    "globalOfficesSubtitle": "We have offices worldwide to serve you better",
+    "hq": "Headquarters - USA",
+    "hqAddress": "123 Agricultural District, Green Valley, State 12345",
+
+    "europe": "European Office - Netherlands",
+    "europeAddress": "Agro Business Park 45, 2685 DB Den Haag",
+
+    "asia": "Asian Office - Singapore",
+    "asiaAddress": "1 Marina Bay, Singapore 018989"
+  }
 }
