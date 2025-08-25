@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Leaf } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTranslation } from 'react-i18next'
 
@@ -25,61 +25,73 @@ const Navbar = () => {
     localStorage.setItem("lang", lng); 
   }
 
-    useEffect(() => {
+  useEffect(() => {
     const savedLang = localStorage.getItem("lang");
     if (savedLang) {
       i18n.changeLanguage(savedLang);
     }
   }, [i18n]);
 
-
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-14 md:h-36">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              {/* <Leaf className="h-8 w-8 text-green-600" /> */}
-              <img src='/alhikma-logo.png' alt='logo' className='h-12 md:h-16'/>
-              {/* <span className="text-2xl font-bold text-gray-900">Al Hikma Agro</span> */}
+              <img src='/alhikma-logo.png' alt='logo' className='h-12 md:h-32'/>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-3.5">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`px-3 py-2 rounded-md font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Right Section */}
+          <div className="flex flex-col justify-center">
+            {/* Phone Numbers (desktop only) */}
+            <div className="hidden md:flex items-center justify-end space-x-6 mb-2">
+              <a href="tel:+880123456789" className="flex items-center text-gray-700 hover:text-green-600">
+                <Phone className="h-5 w-5 mr-2 text-green-600" />
+                01837886250
+              </a>
+              <a href="tel:+880987654321" className="flex items-center text-gray-700 hover:text-green-600">
+                <Phone className="h-5 w-5 mr-2 text-green-600" />
+                01796445891
+              </a>
+            </div>
 
-            {/* Language Switch */}
-            <div className="flex space-x-1">
-              <Button
-                variant={i18n.language === 'en' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => changeLanguage('en')}
-                className="cursor-pointer"
-              >
-                {t('lang.en')}
-              </Button>
-              <Button
-                variant={i18n.language === 'bn' ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => changeLanguage('bn')}
-                className="cursor-pointer"
-              >
-                {t('lang.bn')}
-              </Button>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-3.5">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`px-3 py-2 rounded-md font-medium transition-colors ${
+                    isActive(item.path)
+                      ? 'text-green-600 bg-green-50'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* Language Switch */}
+              <div className="flex space-x-1">
+                <Button
+                  variant={i18n.language === 'en' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => changeLanguage('en')}
+                  className="cursor-pointer"
+                >
+                  {t('lang.en')}
+                </Button>
+                <Button
+                  variant={i18n.language === 'bn' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => changeLanguage('bn')}
+                  className="cursor-pointer"
+                >
+                  {t('lang.bn')}
+                </Button>
+              </div>
             </div>
           </div>
 
