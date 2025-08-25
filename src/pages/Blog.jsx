@@ -167,7 +167,7 @@ const Blog = () => {
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className={selectedCategory === category ? "bg-green-600 hover:bg-green-700" : ""}
+                  className={selectedCategory === category ? "bg-green-600 hover:bg-green-700 cursor-pointer" : ""}
                 >
                   {t(`categories.${category}`)}
                 </Button>
@@ -223,7 +223,7 @@ const Blog = () => {
                       <span>{featuredPost.readTime}</span>
                     </div>
                     
-                    <Button className="bg-green-600 hover:bg-green-700">
+                    <Button className="bg-green-600 hover:bg-green-700 cursor-pointer">
                       {t('blog.readMore')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -294,7 +294,7 @@ const Blog = () => {
                     
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.readTime}</span>
-                      <Button variant="outline" size="sm" className="group-hover:bg-green-600 group-hover:text-white transition-colors">
+                      <Button variant="outline" size="sm" className="bg-green-600 hover:bg-green-700 text-white hover:text-white cursor-pointer">
                         {t('blog.readMore')}
                         <ArrowRight className="ml-2 h-3 w-3" />
                       </Button>
@@ -308,7 +308,7 @@ const Blog = () => {
           {/* Load More Button */}
           {filteredPosts.length > 0 && (
             <div className="text-center mt-12">
-              <Button variant="outline" size="lg" className="hover:bg-green-600 hover:text-white">
+              <Button variant="outline" size="lg" className="hover:bg-green-600 hover:text-white cursor-pointer">
                 {t('blog.loadMore')}
               </Button>
             </div>

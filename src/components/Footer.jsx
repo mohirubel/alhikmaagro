@@ -115,8 +115,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-300">{t("copyright")}</p>
+        <div className="flex flex-wrap justify-center border-t border-gray-800 mt-8 pt-8 text-center text-gray-300 space-x-1">
+          <p>{t("footer.copyright")}</p>
+          <span>|</span>
+          <Link to="/privacy-policy" className="hover:text-green-500">
+            {t("footer.privacy")}
+          </Link>
+          <span>|</span>
+          <Link to="/terms-of-service" className="hover:text-green-500">
+            {t("footer.terms")}
+          </Link>
         </div>
       </div>
     </footer>

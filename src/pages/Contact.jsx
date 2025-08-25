@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import CallInAction from "@/components/Common/CallInAction";
 import { Helmet } from "react-helmet-async";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
@@ -40,6 +41,32 @@ const Contact = () => {
       subject: "",
       message: "",
     });
+
+    //   emailjs
+    // .send(
+    //   "service_iqu06w1",     // replace with actual service ID
+    //   "template_uyv6vpe",    // replace with actual template ID
+    //   formData,              // must match template variables
+    //   "Zz0xY4C2thC0Jq1Jn"      // replace with actual public key
+    // )
+    // .then(
+    //   (result) => {
+    //     console.log("Email sent:", result.text);
+    //     alert(t("contactPage.thankYou"));
+    //     setFormData({
+    //       name: "",
+    //       email: "",
+    //       company: "",
+    //       phone: "",
+    //       subject: "",
+    //       message: "",
+    //     });
+    //   },
+    //   (error) => {
+    //     console.error("Email error:", error.text);
+    //     alert("Something went wrong. Please try again.");
+    //   }
+    // );
   };
 
   const contactInfo = [
@@ -64,7 +91,7 @@ const Contact = () => {
     {
       icon: <MessageSquare className="h-6 w-6 text-green-600" />,
       title: t("contactPage.whatsapp"),
-      details: ["+8801837886250"],
+      details: ["+8801837886250", "+8801796445891"],
       description: t("contactPage.whatsappDesc"),
     },
   ];
@@ -143,7 +170,6 @@ const Contact = () => {
                           id="email"
                           name="email"
                           type="email"
-                          required
                           value={formData.email}
                           onChange={handleInputChange}
                           placeholder={t("contactPage.placeholderEmail")}
@@ -212,7 +238,7 @@ const Contact = () => {
 
                     <Button
                       type="submit"
-                      className="w-full bg-green-600 hover:bg-green-700 mb-3"
+                      className="w-full bg-green-600 hover:bg-green-700 mb-3 cursor-pointer"
                     >
                       {t("contactPage.sendMessage")}
                     </Button>
@@ -238,7 +264,6 @@ const Contact = () => {
                         </h3>
                         {info.details.map((detail, idx) =>
                           info.title === t("contactPage.phone") ? (
-                            // 📞 Phone Numbers Clickable
                             <a
                               key={idx}
                               href={`tel:${detail}`}
@@ -247,7 +272,6 @@ const Contact = () => {
                               {detail}
                             </a>
                           ) : (
-                            // Other Details Static
                             <p key={idx} className="text-gray-600">
                               {detail}
                             </p>
@@ -268,7 +292,7 @@ const Contact = () => {
                   <div className="h-64 w-full rounded-lg overflow-hidden">
                     <iframe
                       title="Company Location"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.567432779364!2d90.41251891543268!3d23.810331384555846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7abf3dbb8c3%3A0xa563f0db14e63bf3!2sGreen%20Valley!5e0!3m2!1sen!2sbd!4v1692567890123!5m2!1sen!2sbd"
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29436.8898761467!2d91.15870564237052!3d22.742686911600515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3754a90005075085%3A0x21b4439de81a943c!2sAl-Hikma%20Agro%20Limited!5e0!3m2!1sen!2sbd!4v1756109357847!5m2!1sen!2sbd"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

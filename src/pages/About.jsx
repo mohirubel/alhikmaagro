@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Eye, Target, Award } from 'lucide-react'
+import { Eye, Target, Award, Scale, Lightbulb } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import CallInAction from '@/components/Common/CallInAction'
 import { Helmet } from 'react-helmet-async'
@@ -150,6 +150,62 @@ const team = [
               <p className="text-gray-600">{c.description}</p>
             </Card>
           ))}
+        </div>
+      </section>
+
+{/* Our Code of Conduct */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold flex justify-center items-center gap-2">
+              {t('about.conduct.title')}
+            </h2>
+            <p className="text-xl text-gray-600">{t('about.conduct.subtitle')}</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.conduct.integrity.title')}</h3>
+              <p className="text-gray-600">{t('about.conduct.integrity.desc')}</p>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.conduct.sustainability.title')}</h3>
+              <p className="text-gray-600">{t('about.conduct.sustainability.desc')}</p>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.conduct.community.title')}</h3>
+              <p className="text-gray-600">{t('about.conduct.community.desc')}</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+{/* Our Strategy */}
+       <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold flex justify-center items-center gap-2">
+              {t('about.strategy.title')}
+            </h2>
+            <p className="text-xl text-gray-600">{t('about.strategy.subtitle')}</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.strategy.innovation.title')}</h3>
+              <p className="text-gray-600">{t('about.strategy.innovation.desc')}</p>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.strategy.market.title')}</h3>
+              <p className="text-gray-600">{t('about.strategy.market.desc')}</p>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.strategy.collab.title')}</h3>
+              <p className="text-gray-600">{t('about.strategy.collab.desc')}</p>
+            </Card>
+            <Card className="p-6">
+              <h3 className="font-semibold text-lg mb-2">{t('about.strategy.future.title')}</h3>
+              <p className="text-gray-600">{t('about.strategy.future.desc')}</p>
+            </Card>
+          </div>
         </div>
       </section>
 

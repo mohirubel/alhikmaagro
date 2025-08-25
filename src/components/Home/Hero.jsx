@@ -8,22 +8,37 @@ import { useEffect, useState } from 'react'
 export default function Hero() {
   const { t } = useTranslation()
 
-  const images = [
-    'https://news.ucsb.edu/sites/default/files/styles/large_2340x1212/public/2024-03/Pesticides-organic-iStock.jpg?itok=DjiG6lqG',
-    'https://naturespath.com/cdn/shop/articles/organic_farm_field-598622.jpg?v=1725927254',
-    'https://d3bozysj9qkbnw.cloudfront.net/webuploads/UK-ForFarmers/News-and-Knowledge/_heroFull/351247/Organic-cows-grazing-header-2048-1024-px.webp'
+  const slides = [
+    {
+      image:
+        'https://news.ucsb.edu/sites/default/files/styles/large_2340x1212/public/2024-03/Pesticides-organic-iStock.jpg?itok=DjiG6lqG',
+      title: t('home.hero.title1'),
+      subtitle: t('home.hero.subtitle1')
+    },
+    {
+      image:
+        'https://naturespath.com/cdn/shop/articles/organic_farm_field-598622.jpg?v=1725927254',
+      title: t('home.hero.title2'),
+      subtitle: t('home.hero.subtitle2')
+    },
+    {
+      image:
+        'https://d3bozysj9qkbnw.cloudfront.net/webuploads/UK-ForFarmers/News-and-Knowledge/_heroFull/351247/Organic-cows-grazing-header-2048-1024-px.webp',
+      title: t('home.hero.title3'),
+      subtitle: t('home.hero.subtitle3')
+    }
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [direction, setDirection] = useState(1) 
+  const [direction, setDirection] = useState(1)
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDirection(1) // always slide to right
-      setCurrentIndex((prev) => (prev + 1) % images.length)
+      setCurrentIndex((prev) => (prev + 1) % slides.length)
     }, 5000)
     return () => clearInterval(interval)
-  }, [images.length])
+  }, [slides.length])
 
   return (
     <section className="relative h-[66vh] flex items-center justify-center overflow-hidden">
@@ -32,7 +47,7 @@ export default function Hero() {
         <motion.div
           key={currentIndex}
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${images[currentIndex]})` }}
+          style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
           custom={direction}
           initial={{ x: direction > 0 ? '100%' : '-100%' }}
           animate={{ x: 0 }}
@@ -44,25 +59,45 @@ export default function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Content */}
+      {/* Content Slider */}
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          {t('home.hero.title')}
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-          {t('home.hero.subtitle')}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
-            <Link to="/products">
-              {t('home.hero.exploreBtn')}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="text-black border-white hover:bg-white hover:text-green-600 text-lg px-8 py-3">
-            <Link to="/about">{t('home.hero.learnBtn')}</Link>
-          </Button>
-        </div>
+        <AnimatePresence mode="wait" custom={direction}>
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              {slides[currentIndex].title}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+              {slides[currentIndex].subtitle}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3"
+              >
+                <Link to="/products">
+                  {t('home.hero.exploreBtn')}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="text-black border-white hover:bg-white hover:text-green-600 text-lg px-8 py-3"
+              >
+                <Link to="/about">{t('home.hero.learnBtn')}</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   )

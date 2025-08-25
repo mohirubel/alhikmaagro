@@ -13,11 +13,9 @@ import {
   Leaf,
   ShoppingCart,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import CallInAction from "@/components/Common/CallInAction";
 
 const Products = () => {
-  const navigate = useNavigate();
   const { t, i18n } = useTranslation()
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -208,9 +206,15 @@ const Products = () => {
   
   const featuredProducts = products.filter((product) => product.featured);
 
-  const handlePurchase = (url) => {
-    navigate("/details");
-  };
+const handlePurchase = (product) => {
+  if (!product?.category) return; // safety check
+
+  // build the URL using product.category
+  const url = `http://alhikma.buyzaarbd.com/${product.category}`;
+
+  // open in new tab
+  window.open(url, "_blank");
+};
   
   return (
     <div className="min-h-screen">
@@ -278,8 +282,8 @@ const Products = () => {
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <div className="flex gap-2">
                     <Button
-                      className="flex-1 bg-green-600 hover:bg-green-700"
-                      onClick={() => handlePurchase(product.purchaseUrl)}
+                      className="flex-1 bg-green-600 hover:bg-green-700 cursor-pointer"
+                      onClick={() => handlePurchase(product)}
                     >
                       <ShoppingCart className="h-4 w-4 mr-2" />
                       {t("buttons.purchase")}
@@ -421,8 +425,8 @@ const Products = () => {
                     <div className="flex gap-2">
                       <Button
                         size="sm"
-                        className="flex-1 bg-green-600 hover:bg-green-700 text-xs"
-                        onClick={() => handlePurchase(product.purchaseUrl)}
+                        className="flex-1 bg-green-600 hover:bg-green-700 text-xs cursor-pointer"
+                        onClick={() => handlePurchase(product)}
                       >
                         <ShoppingCart className="h-3 w-3 mr-1" />
                         {t("buttons.viewMore")}
@@ -441,7 +445,7 @@ const Products = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="hover:bg-green-600 hover:text-white"
+                className="hover:bg-green-600 hover:text-white cursor-pointer"
               >
                 {t("buttons.loadMore")}
               </Button>

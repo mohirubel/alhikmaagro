@@ -5,7 +5,8 @@
     "products": "Products",
     "sustainability": "Sustainability",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "digitalHub": "Digital Hub"
   },
   "brand": "Al Hikma Agro",
   "lang": {
@@ -16,12 +17,18 @@
     "hero": {
       "title": "Premium Agricultural Products",
       "subtitle": "Connecting farms to markets with quality grains, seeds, fruits, and vegetables. Your trusted partner in sustainable agriculture.",
-      "exploreBtn": "Explore Our Products",
+            "title1": "Healthy Harvest, Pure Goodness",
+      "subtitle1": "We grow food with love and care, free from chemicals and pesticides.",
+      "title2": "Sustainable Farming for the Future",
+      "subtitle2": "Nurturing soil, water, and people through natural farming practices.",
+      "title3": "Fresh from Our Fields to Your Table",
+      "subtitle3": "Enjoy organic fruits, vegetables, and grains straight from nature.",
+      "exploreBtn": "Explore Products",
       "learnBtn": "Learn More"
     },
     "intro": {
       "title": "Who We Are",
-      "description": "Al Hikma Agro is a leading agricultural products company dedicated to providing premium quality grains, seeds, fruits, and vegetables to customers worldwide. With years of experience and a commitment to sustainable farming practices, we bridge the gap between farmers and global markets."
+      "description": "Al Hikma Agro is a trusted organic agricultural company dedicated to delivering premium-quality grains, seeds, fruits, and vegetables to customers worldwide. With years of experience in sustainable organic farming, we ensure that every product is fresh, natural, and responsibly grown. Our mission is to bridge the gap between farmers and global markets while promoting healthier food choices and eco-friendly practices."
     },
     "features": {
       "sustainable": {
@@ -59,7 +66,7 @@
     {
       "id": 2,
       "name": "Organic Cattle Farm",
-      "category": "Livestock",
+      "category": "Cattle",
       "description": "Organic Cattle Farm is dedicated to raising healthy, grass-fed cows in a natural and sustainable environment. Our cattle are nurtured with care, free from harmful chemicals, hormones, and antibiotics. We believe in pure farming practices that protect nature, ensure animal well-being, and deliver high-quality organic dairy and meat products. With fresh green pastures and a commitment to sustainability, we bring you the true taste of nature—safe, nutritious, and wholesome.",
       "image": "https://smallfarms.cornell.edu/wp-content/uploads/2020/01/SFQ-organic-dairy-cows-grazing-scaled.jpg"
     },
@@ -93,7 +100,11 @@
     "email": "info@alhikmaagro.com",
     "address": "Nobgram (Beside Nimtola Bazar), Ward No. 3, Dhanshiri Union, Kabirhat, Noakhali."
   },
-  "copyright": "© 2025 Al Hikma Agro. All rights reserved. | Privacy Policy | Terms of Service",
+  "footer": {
+    "copyright": "© 2025 Al Hikma Agro. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
   "about": {
     "title": "About Al Hikma Agro",
     "subtitle": "We believe that sustainable agriculture is the key to the future. Our goal is to work hand in hand with farmers and connect their premium quality products to global markets. Through innovative solutions and creative thinking, we aim to make farming easier, more productive, and more profitable.",
@@ -158,14 +169,50 @@
       "title": "Our Leadership Team",
       "subtitle": "Meet the experts driving our mission forward",
       "ceo": {
-        "name": "Ahmed Al-Hikma",
+        "name": "01837886250",
         "position": "Project Manager",
         "desc": "20+ years experience in agricultural business and sustainable farming practices."
       },
       "ops": {
-        "name": "Sarah Johnson",
+        "name": "01796445891",
         "position": "Fisheries and Aquaculture Manager",
         "desc": "Expert in supply chain management and international trade operations."
+      }
+    },
+        "conduct": {
+      "title": "Our Code of Conduct",
+      "subtitle": "Guided by ethics, responsibility, and sustainability",
+            "integrity": {
+        "title": "Integrity",
+        "desc": "We conduct all our farming and business practices with honesty, fairness, and transparency."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "desc": "We prioritize eco-friendly methods that protect nature and ensure long-term agricultural growth."
+      },
+      "community": {
+        "title": "Community",
+        "desc": "We work closely with farmers, partners, and consumers to build a strong and supportive community."
+      }
+    },
+    "strategy": {
+      "title": "Our Strategy",
+      "subtitle": "Shaping the future of organic farming",
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We continuously adopt modern techniques and research-driven practices to improve productivity and quality."
+      },
+      "market": {
+        "title": "Market Expansion",
+        "desc": "We are building strong networks to connect local farmers with global markets, ensuring fair trade and growth."
+      },
+      "collab": {
+        "title": "Collaboration",
+        "desc": "We foster partnerships with organizations, researchers, and communities to promote sustainable farming."
+      },
+      "future": {
+        "title": "Future Vision",
+        "desc": "Our vision is to lead in organic farming, creating a healthier planet and better opportunities for future generations."
       }
     }
   },
@@ -414,12 +461,12 @@
   },
   "contactPage": {
     "heroTitle": "Contact Us",
-    "heroSubtitle": "Get in touch with our team for partnerships, inquiries, or support. We're here to help you with all your agricultural product needs.",
+    "heroSubtitle": "Get in touch with our team for inquiries, or support. We're here to help you with all your agricultural product needs.",
 
     "formTitle": "Send us a Message",
     "formSubtitle": "Fill out the form below and we'll get back to you as soon as possible.",
     "fullName": "Full Name *",
-    "emailAddress": "Email Address *",
+    "emailAddress": "Email Address",
     "company": "Company",
     "phoneNumber": "Phone Number",
     "subject": "Subject *",
@@ -427,7 +474,7 @@
     "placeholderFullName": "Your full name",
     "placeholderEmail": "your.email@example.com",
     "placeholderCompany": "Your company name",
-    "placeholderPhone": "+1 (555) 123-4567",
+    "placeholderPhone": "+880178498542..",
     "placeholderSubject": "What is this regarding?",
     "placeholderMessage": "Please provide details about your inquiry...",
     "sendMessage": "Send Message",
@@ -440,7 +487,7 @@
     "closed": "Closed",
 
     "phone": "Phone",
-    "phoneDesc": "Mon-Fri 8:00 AM - 6:00 PM",
+    "phoneDesc": "",
     "email": "Email",
     "emailDesc": "We respond within 24 hours",
     "address": "Address",
@@ -490,5 +537,137 @@
       "title": "Contact Us – Al Hikma Agro | Organic Agriculture Solutions",
       "description": "Get in touch with Al Hikma Agro for organic farming products, partnerships, or inquiries. We’re here to support you worldwide."
     }
-  }
+  },
+    "terms": {
+    "title": "Terms of Service – Al Hikma Agro",
+    "meta": "Review Al Hikma Agro’s Terms of Service for using our website and purchasing our organic agricultural products responsibly.",
+    "heading": "Terms of Service",
+    "sections": {
+      "intro": "By using our website and services, you agree to the following Terms of Service.",
+      "use": {
+        "title": "Use of Website",
+        "content": "Our website is for personal and commercial use related to organic agriculture. Misuse of content or data is prohibited."
+      },
+      "products": {
+        "title": "Product Information",
+        "content": "We strive to ensure all product details are accurate, but variations in availability, price, or quality may occur."
+      },
+      "orders": {
+        "title": "Orders & Payments",
+        "content": "Placing an order confirms your agreement to provide correct details and make timely payment through approved methods."
+      },
+      "delivery": {
+        "title": "Shipping & Delivery",
+        "content": "Delivery times may vary based on location. We ensure safe and timely delivery of all organic products."
+      },
+      "refunds": {
+        "title": "Refunds & Returns",
+        "content": "If products are damaged or not as described, you may request a return or refund under our policy."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "Al Hikma Agro is not liable for indirect losses arising from product misuse or delays beyond our control."
+      },
+      "law": {
+        "title": "Governing Law",
+        "content": "These terms are governed by the laws of Bangladesh. Disputes will be resolved under local jurisdiction."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy – Al Hikma Agro",
+    "meta": "Read Al Hikma Agro’s Privacy Policy to learn how we collect, protect, and use your data while delivering fresh, organic agricultural products.",
+    "heading": "Privacy Policy",
+    "sections": {
+      "intro": "At Al Hikma Agro, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our website or services.",
+      "info": {
+        "title": "Information We Collect",
+        "content": "We may collect personal details such as your name, email address, phone number, and delivery information when you place an order or contact us."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "Your data helps us deliver products, improve services, respond to inquiries, and provide updates about organic farming and sustainable agriculture."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "We use cookies to enhance your browsing experience and analyze site performance. You can disable cookies in your browser settings."
+      },
+      "thirdparty": {
+        "title": "Third-Party Sharing",
+        "content": "We do not sell or trade your personal data. Information may only be shared with trusted partners who support our farming operations and logistics."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "You have the right to access, update, or request deletion of your personal data by contacting us directly."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We use industry-standard practices to secure your data against unauthorized access, alteration, or disclosure."
+      }
+    }
+  },
+"digitalHub": {
+  "title": "Digital Hub – Technology for Smarter Organic Farming",
+  "subtitle": "Connecting farmers with digital solutions that improve productivity, sustainability, and organic integrity.",
+  "features": {
+    "marketplace": { "title": "Online Marketplace", "desc": "Sell organic produce directly to consumers, avoiding middlemen." },
+    "mobile": { "title": "Mobile Access", "desc": "Instant access to weather, market prices, and organic farming tips." },
+    "analytics": { "title": "Data & Analytics", "desc": "Monitor soil health, crop growth, and predict harvest outcomes." },
+    "community": { "title": "Farmer Community", "desc": "Join discussions, ask questions, and collaborate on organic methods." },
+    "training": { "title": "Digital Training", "desc": "Step-by-step video courses and guides on sustainable farming." },
+    "organic": { "title": "Organic Certification Support", "desc": "Guidelines and digital tools to help farmers meet organic certification requirements." },
+    "smartFarming": { "title": "Smart Farming Tools", "desc": "Access modern equipment, drones, and apps designed for organic farms." },
+    "iot": { "title": "IoT & Smart Sensors", "desc": "Monitor soil moisture, irrigation, and fertilizer use with smart devices." },
+    "knowledge": { "title": "Knowledge Library", "desc": "Access e-books, articles, and expert advice on organic farming." },
+    "certification": { "title": "Traceability & Safety", "desc": "Blockchain-based systems to ensure food safety and traceability." }
+  },
+  "success": {
+    "title": "Success Stories",
+    "farmer1": {
+      "title": "Rural Farmer in Bangladesh",
+      "desc": "By using the Digital Hub mobile app, Abdul reduced pesticide use by 70% and increased his organic vegetable sales by 40%."
+    },
+    "farmer2": {
+      "title": "Women Farmers’ Collective",
+      "desc": "A group of women farmers connected via the Digital Hub community to share resources and now collectively supply fresh organic produce to Dhaka markets."
+    }
+  },
+  "future": {
+    "title": "Future Vision",
+    "desc": "We envision a world where every farmer, regardless of location, can access the tools, knowledge, and markets needed to thrive with organic, sustainable farming."
+  },
+  "cta": {
+    "title": "Join the Digital Hub Today",
+    "desc": "Be part of the farming revolution — connect, learn, and grow with digital tools built for you.",
+    "button": "Get Started"
+  },
+   "socials": {
+      "facebook": {
+        "title": "Facebook",
+        "desc": "Follow us on Facebook for daily updates, events, and farming tips."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "desc": "Watch tutorials, farm visits, and organic success stories on our channel."
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "desc": "Chat directly with our team and get instant support on WhatsApp."
+      },
+      "instagram": {
+        "title": "Instagram",
+        "desc": "See behind-the-scenes photos and organic lifestyle inspiration."
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "desc": "Connect with us professionally and explore collaboration opportunities."
+      },
+      "twitter": {
+        "title": "Twitter/X",
+        "desc": "Stay updated with quick news, insights, and farming innovations."
+      }
+    }
+}
+
+
 }

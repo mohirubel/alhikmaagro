@@ -14,6 +14,16 @@ export default function ProductDetails() {
   // Find product by id (string → number)
   const product = products.find((p) => String(p.id) === id);
 
+const handlePurchase = (product) => {
+  if (!product?.category) return; // safety check
+
+  // build the URL using product.category
+  const url = `http://alhikma.buyzaarbd.com/${product.category}`;
+
+  // open in new tab
+  window.open(url, "_blank");
+};
+
   if (!product) {
     return (
       <div className="max-w-4xl mx-auto py-16 px-4 text-center">
@@ -33,7 +43,6 @@ export default function ProductDetails() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        
         {/* Product Image */}
         <div className="rounded-lg overflow-hidden shadow-md">
           <img
@@ -45,7 +54,9 @@ export default function ProductDetails() {
 
         {/* Product Details */}
         <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{product.name}</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {product.name}
+          </h1>
           <span className="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
             {product.category}
           </span>
@@ -53,12 +64,13 @@ export default function ProductDetails() {
           <p className="text-lg text-gray-700 mb-6">{product.description}</p>
 
           <div className="flex gap-4">
-          <Link to="/details">
-             <Button className="bg-green-600 hover:bg-green-700">
+            <Button
+              onClick={() => handlePurchase(product)}
+              className="bg-green-600 hover:bg-green-700"
+            >
               Buy Now
             </Button>
-          </Link>
-            
+
             <Link to="/">
               <Button variant="outline">
                 <ArrowLeft className="mr-2 h-5 w-5" />

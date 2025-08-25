@@ -15,7 +15,8 @@ const Navbar = () => {
     { name: t('nav.products'), path: '/products' },
     { name: t('nav.sustainability'), path: '/sustainability' },
     { name: t('nav.blog'), path: '/blog' },
-    { name: t('nav.contact'), path: '/contact' }
+    { name: t('nav.digitalHub'), path: '/digital-hub' },
+    { name: t('nav.contact'), path: '/contact' },
   ]
 
   const isActive = (path) => location.pathname === path
@@ -47,11 +48,11 @@ const Navbar = () => {
           <div className="flex flex-col justify-center">
             {/* Phone Numbers (desktop only) */}
             <div className="hidden md:flex items-center justify-end space-x-6 mb-2">
-              <a href="tel:+880123456789" className="flex items-center text-gray-700 hover:text-green-600">
+              <a href="tel:+880123456789" className="flex items-center text-gray-700 hover:text-green-600 font-bold">
                 <Phone className="h-5 w-5 mr-2 text-green-600" />
                 01837886250
               </a>
-              <a href="tel:+880987654321" className="flex items-center text-gray-700 hover:text-green-600">
+              <a href="tel:+880987654321" className="flex items-center text-gray-700 hover:text-green-600 font-bold">
                 <Phone className="h-5 w-5 mr-2 text-green-600" />
                 01796445891
               </a>
@@ -74,7 +75,7 @@ const Navbar = () => {
               ))}
 
               {/* Language Switch */}
-              <div className="flex space-x-1">
+              <div className="flex space-x-1.5">
                 <Button
                   variant={i18n.language === 'en' ? 'default' : 'outline'}
                   size="sm"
