@@ -3,9 +3,10 @@ import { Badge } from '@/components/ui/badge'
 import { Eye, Target, Award } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import CallInAction from '@/components/Common/CallInAction'
+import { Helmet } from 'react-helmet-async'
 
 const About = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const milestones = [
     { year: '2010', event: t('about.milestones.founded.event'), description: t('about.milestones.founded.desc') },
@@ -42,6 +43,12 @@ const team = [
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{t('seo.about.title')}</title>
+        <meta name="description" content={t('seo.about.description')} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
+      </Helmet>
+
       <CallInAction title={t('about.title')} subTitle={t('about.subtitle')}/>
 
       {/* Company Overview */}

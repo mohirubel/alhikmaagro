@@ -54,7 +54,7 @@ export default function FeaturedProducts() {
                 <Link to={`/products/${product.id}`}>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-green-600 group-hover:text-white transition-colors"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white hover:text-white cursor-pointer"
                   >
                     {t("home.products.viewDetails")}
                     <ArrowRight className="ml-2 h-4 w-4" />

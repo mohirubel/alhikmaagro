@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Helmet } from 'react-helmet-async'
 import {
   Search,
   Filter,
@@ -12,14 +12,13 @@ import {
   Star,
   Leaf,
   ShoppingCart,
-  Eye,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CallInAction from "@/components/Common/CallInAction";
 
 const Products = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation()
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name");
@@ -34,38 +33,6 @@ const Products = () => {
     t("product-categories.fertilizers"),
     t("product-categories.organicProducts"),
   ];
-
-  // const products = [
-  //   {
-  //     id: 3,
-  //     name: t("products.tomatoes.name"),
-  //     category: t("product-categories.vegetables"),
-  //     description: t("products.tomatoes.desc"),
-  //     image: 'https://cdn.mos.cms.futurecdn.net/6ct8VbpM7PtB2JdiqCMicQ.jpg',
-  //     price: '$8/kg',
-  //     rating: 4.7,
-  //     organic: false,
-  //     featured: false,
-  //     inStock: true,
-  //     origin: 'Mexico',
-  //     purchaseUrl: 'https://amazon.com/product3'
-  //   },
-  //   {
-  //     id: 4,
-  //     name: t("products.cornSeeds.name"),
-  //     category: t("product-categories.seeds"),
-  //     description: t("products.cornSeeds.desc"),
-  //     image: 'https://static.vecteezy.com/system/resources/previews/025/525/613/non_2x/peeled-corn-cob-yellow-seeds-top-view-ai-generated-image-photo.jpg',
-  //     price: '$120/bag',
-  //     rating: 4.6,
-  //     organic: false,
-  //     featured: false,
-  //     inStock: true,
-  //     origin: 'USA',
-  //     purchaseUrl: 'https://alibaba.com/product4'
-  //   },
-  //   // ... continue same pattern for other products
-  // ]
 
   const products = [
     {
@@ -242,12 +209,17 @@ const Products = () => {
   const featuredProducts = products.filter((product) => product.featured);
 
   const handlePurchase = (url) => {
-    // window.open(url, '_blank')
     navigate("/details");
   };
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{t('seo.products.title')}</title>
+        <meta name="description" content={t('seo.products.description')} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
+      </Helmet>
+      
       <CallInAction title={t("product-hero.title")} subTitle={t("product-hero.subtitle")}/>
 
       {/* Featured Products */}

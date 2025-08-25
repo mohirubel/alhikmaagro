@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Calendar, User, ArrowRight, Search } from 'lucide-react'
 import CallInAction from '@/components/Common/CallInAction'
+import { Helmet } from 'react-helmet-async'
 
 const Blog = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
 
@@ -134,6 +135,12 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{t('seo.blog.title')}</title>
+        <meta name="description" content={t('seo.blog.description')} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
+      </Helmet>
+
       <CallInAction title={t('blog.hero.title')} subTitle={t('blog.hero.subtitle')}/>
 
       {/* Search and Filter */}

@@ -7,9 +7,10 @@ import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react'
 import CallInAction from '@/components/Common/CallInAction'
+import { Helmet } from 'react-helmet-async'
 
 const Contact = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,7 +46,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-green-600" />,
       title: t('contactPage.phone'),
-      details: ['+880 1716 592102', '+61 402 647 138'],
+      details: ['+8801837886250', '+8801796445891'],
       description: t('contactPage.phoneDesc')
     },
     {
@@ -63,7 +64,7 @@ const Contact = () => {
     {
       icon: <MessageSquare className="h-6 w-6 text-green-600" />,
       title: t('contactPage.whatsapp'),
-      details: ['+880 1716 592102'],
+      details: ['+8801837886250'],
       description: t('contactPage.whatsappDesc')
     }
   ]
@@ -91,6 +92,11 @@ const offices = [
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{t('seo.contact.title')}</title>
+        <meta name="description" content={t('seo.contact.description')} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
+      </Helmet>
       <CallInAction title={t('contactPage.heroTitle')} subTitle={t('contactPage.heroSubtitle')}/>
 
       {/* Contact Form and Info */}

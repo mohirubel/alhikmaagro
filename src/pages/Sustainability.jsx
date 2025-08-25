@@ -14,9 +14,10 @@ import {
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import CallInAction from '@/components/Common/CallInAction'
+import { Helmet } from 'react-helmet-async'
 
 const Sustainability = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const practices = [
     {
@@ -94,6 +95,12 @@ const Sustainability = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{t('seo.sustainability.title')}</title>
+        <meta name="description" content={t('seo.sustainability.description')} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
+      </Helmet>
+
       <CallInAction title={t("hero.title")} subTitle={t("hero.subtitle")}/>
 
       {/* Impact Statistics */}

@@ -20,10 +20,10 @@ export default function ProductDetails() {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           {t("home.products.notFound", "Product not found")}
         </h2>
-        <Link to="/products">
+        <Link to="/">
           <Button className="bg-green-600 hover:bg-green-700">
             <ArrowLeft className="mr-2 h-5 w-5" />
-            {t("home.products.backToProducts", "Back to Products")}
+            {t("home.products.backToProducts", "Back to Home")}
           </Button>
         </Link>
       </div>
