@@ -207,10 +207,10 @@ const Products = () => {
   const featuredProducts = products.filter((product) => product.featured);
 
 const handlePurchase = (product) => {
-  if (!product?.category) return; // safety check
+  if (!product?.categoryKey) return; // safety check
 
   // build the URL using product.category
-  const url = `http://alhikma.buyzaarbd.com/${product.category}`;
+  const url = `http://alhikma.buyzaarbd.com/${product.categoryKey}`;
 
   // open in new tab
   window.open(url, "_blank");
@@ -230,10 +230,10 @@ const handlePurchase = (product) => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t("featured.title")}
             </h2>
-            <p className="text-xl text-gray-600">{t("featured.subtitle")}</p>
+            <p className="text-lg md:text-xl text-gray-600">{t("featured.subtitle")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,7 +302,7 @@ const handlePurchase = (product) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 w-full md:max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input
                 type="text"

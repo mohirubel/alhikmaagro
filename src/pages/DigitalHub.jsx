@@ -45,19 +45,19 @@ const DigitalHub = () => {
     icon: <Instagram className="h-8 w-8 text-pink-500" />, 
     title: t("digitalHub.socials.instagram.title"), 
     desc: t("digitalHub.socials.instagram.desc"), 
-    link: "https://instagram.com"
+    link: "javascript:void(0)"
   },
   { 
     icon: <Linkedin className="h-8 w-8 text-blue-700" />, 
     title: t("digitalHub.socials.linkedin.title"), 
     desc: t("digitalHub.socials.linkedin.desc"), 
-    link: "https://linkedin.com"
+    link: "javascript:void(0)"
   },
   { 
     icon: <Twitter className="h-8 w-8 text-sky-500" />, 
     title: t("digitalHub.socials.twitter.title"), 
     desc: t("digitalHub.socials.twitter.desc"), 
-    link: "https://twitter.com"
+    link: "javascript:void(0)"
   }
 ];
 

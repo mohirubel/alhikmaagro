@@ -262,21 +262,42 @@ const Contact = () => {
                         <h3 className="text-lg font-semibold text-gray-900 mb-1">
                           {info.title}
                         </h3>
-                        {info.details.map((detail, idx) =>
-                          info.title === t("contactPage.phone") ? (
-                            <a
-                              key={idx}
-                              href={`tel:${detail}`}
-                              className="block text-gray-600 hover:text-green-600 transition-colors"
-                            >
-                              {detail}
-                            </a>
-                          ) : (
-                            <p key={idx} className="text-gray-600">
-                              {detail}
-                            </p>
-                          )
-                        )}
+                        {info.details.map((detail, idx) => {
+                          if (info.title === t("contactPage.phone")) {
+                            // Phone link
+                            return (
+                              <a
+                                key={idx}
+                                href={`tel:${detail}`}
+                                className="block text-gray-600 hover:text-green-600 transition-colors"
+                              >
+                                {detail}
+                              </a>
+                            );
+                          } else if (info.title === t("contactPage.whatsapp")) {
+                            // WhatsApp link
+                            const waNumber = detail.replace(/\D/g, ""); // keep only digits
+                            return (
+                              <a
+                                key={idx}
+                                href={`https://wa.me/${waNumber}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block text-gray-600 hover:text-green-600 transition-colors"
+                              >
+                                {detail}
+                              </a>
+                            );
+                          } else {
+                            // Default (email, address, etc.)
+                            return (
+                              <p key={idx} className="text-gray-600">
+                                {detail}
+                              </p>
+                            );
+                          }
+                        })}
+
                         <p className="text-sm text-gray-500 mt-1">
                           {info.description}
                         </p>
@@ -305,7 +326,7 @@ const Contact = () => {
               </Card>
 
               {/* Business Hours */}
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center mt-3">
                     <Clock className="h-5 w-5 text-green-600 mr-2" />
@@ -336,17 +357,17 @@ const Contact = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* Global Offices */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t("contactPage.globalOffices")}
             </h2>
             <p className="text-xl text-gray-600">
@@ -380,7 +401,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

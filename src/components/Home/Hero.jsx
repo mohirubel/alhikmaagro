@@ -70,7 +70,7 @@ export default function Hero() {
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6">
               {slides[currentIndex].title}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">

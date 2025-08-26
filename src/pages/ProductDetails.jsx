@@ -15,10 +15,10 @@ export default function ProductDetails() {
   const product = products.find((p) => String(p.id) === id);
 
 const handlePurchase = (product) => {
-  if (!product?.category) return; // safety check
+  if (!product?.categoryKey) return; // safety check
 
   // build the URL using product.category
-  const url = `http://alhikma.buyzaarbd.com/${product.category}`;
+  const url = `http://alhikma.buyzaarbd.com/${product.categoryKey}`;
 
   // open in new tab
   window.open(url, "_blank");
@@ -54,7 +54,7 @@ const handlePurchase = (product) => {
 
         {/* Product Details */}
         <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {product.name}
           </h1>
           <span className="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">

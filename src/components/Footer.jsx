@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
-  Leaf,
   Phone,
   Mail,
   MapPin,
   Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
+  Youtube,
+  MessageCircle 
 } from "lucide-react";
 
 const Footer = () => {
@@ -37,22 +35,18 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href={company.social.twitter}
+                href={company.social.youtube}
                 className="text-gray-300 hover:text-green-500 transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <Youtube className="h-5 w-5" />
               </a>
               <a
-                href={company.social.instagram}
+                href={`https://wa.me/${company.social.whatsapp}`}
                 className="text-gray-300 hover:text-green-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href={company.social.linkedin}
-                className="text-gray-300 hover:text-green-500 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
+                <MessageCircle  className="h-5 w-5" />
               </a>
             </div>
           </div>

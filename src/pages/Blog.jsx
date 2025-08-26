@@ -148,7 +148,7 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 w-full max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input
                 type="text"
@@ -220,13 +220,13 @@ const Blog = () => {
                         <Calendar className="h-4 w-4 mr-1" />
                         {formatDate(featuredPost.date)}
                       </div>
-                      <span>{featuredPost.readTime}</span>
+                      {/* <span>{featuredPost.readTime}</span> */}
                     </div>
                     
-                    <Button className="bg-green-600 hover:bg-green-700 cursor-pointer">
+                    {/* <Button className="bg-green-600 hover:bg-green-700 cursor-pointer">
                       {t('blog.readMore')}
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </div>
@@ -292,13 +292,13 @@ const Blog = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between">
+                    {/* <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.readTime}</span>
                       <Button variant="outline" size="sm" className="bg-green-600 hover:bg-green-700 text-white hover:text-white cursor-pointer">
                         {t('blog.readMore')}
                         <ArrowRight className="ml-2 h-3 w-3" />
                       </Button>
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               ))}
@@ -306,13 +306,13 @@ const Blog = () => {
           )}
 
           {/* Load More Button */}
-          {filteredPosts.length > 0 && (
+          {/* {filteredPosts.length > 0 && (
             <div className="text-center mt-12">
               <Button variant="outline" size="lg" className="hover:bg-green-600 hover:text-white cursor-pointer">
                 {t('blog.loadMore')}
               </Button>
             </div>
-          )}
+          )} */}
         </div>
       </section>
     </div>

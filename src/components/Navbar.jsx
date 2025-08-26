@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section */}
-          <div className="flex flex-col justify-center">
+          <div className="flex gap-1.5 flex-col justify-center">
             {/* Phone Numbers (desktop only) */}
             <div className="hidden md:flex items-center justify-end space-x-6 mb-2">
               <a href="tel:+880123456789" className="flex items-center text-gray-700 hover:text-green-600 font-bold">

@@ -21,7 +21,7 @@ const TermsOfService = () => {
       {Object.keys(sections).map((key) =>
         key === "intro" ? null : (
           <div key={key} className="mb-6">
-            <h2 className="text-xl font-semibold mb-2">
+            <h2 className="text-lg md:text-xl font-semibold mb-2">
               {sections[key].title}
             </h2>
             <p className="text-gray-700">{sections[key].content}</p>

@@ -17,7 +17,7 @@
     "hero": {
       "title": "Premium Agricultural Products",
       "subtitle": "Connecting farms to markets with quality grains, seeds, fruits, and vegetables. Your trusted partner in sustainable agriculture.",
-            "title1": "Healthy Harvest, Pure Goodness",
+      "title1": "Healthy Harvest, Pure Goodness",
       "subtitle1": "We grow food with love and care, free from chemicals and pesticides.",
       "title2": "Sustainable Farming for the Future",
       "subtitle2": "Nurturing soil, water, and people through natural farming practices.",
@@ -59,6 +59,7 @@
     {
       "id": 1,
       "name": "Organic Vegetables",
+      "categoryKey": "vegetables",
       "category": "Vegetables",
       "description": "Organic Vegetables are grown naturally without the use of harmful pesticides, chemical fertilizers, or genetically modified seeds. Cultivated in healthy soil with sustainable farming practices, they are rich in nutrients, full of natural flavor, and safe for the whole family. Our organic vegetables are harvested fresh from the farm, ensuring quality, purity, and the goodness of nature in every bite. By choosing organic, you not only care for your health but also support eco-friendly farming that protects the environment.",
       "image": "https://cdn.mos.cms.futurecdn.net/6ct8VbpM7PtB2JdiqCMicQ.jpg"
@@ -66,6 +67,7 @@
     {
       "id": 2,
       "name": "Organic Cattle Farm",
+      "categoryKey": "cattle",
       "category": "Cattle",
       "description": "Organic Cattle Farm is dedicated to raising healthy, grass-fed cows in a natural and sustainable environment. Our cattle are nurtured with care, free from harmful chemicals, hormones, and antibiotics. We believe in pure farming practices that protect nature, ensure animal well-being, and deliver high-quality organic dairy and meat products. With fresh green pastures and a commitment to sustainability, we bring you the true taste of nature—safe, nutritious, and wholesome.",
       "image": "https://smallfarms.cornell.edu/wp-content/uploads/2020/01/SFQ-organic-dairy-cows-grazing-scaled.jpg"
@@ -73,6 +75,7 @@
     {
       "id": 3,
       "name": "Organic Fruits",
+      "categoryKey": "fruits",
       "category": "Fruits",
       "description": "Our Organic Fruits are grown with love and care in fertile orchards, without synthetic pesticides, chemical fertilizers, or artificial ripening agents. Fresh, juicy, and naturally sweet, they are packed with essential vitamins, minerals, and antioxidants. From mangoes to papayas, bananas to guavas, each fruit is handpicked at peak ripeness to ensure the best flavor and nutrition. Choosing our organic fruits means choosing health, freshness, and the pure goodness of nature.",
       "image": "https://cdn.britannica.com/84/22184-050-963C9964/Mango.jpg"
@@ -81,11 +84,10 @@
   "company": {
     "name": "Al Hikma Agro",
     "description": "Leading provider of premium agricultural products, committed to sustainable farming practices and delivering quality grains, seeds, fruits, and vegetables worldwide.",
-    "social": {
-      "facebook": "#",
-      "twitter": "#",
-      "instagram": "#",
-      "linkedin": "#"
+     "social": {
+      "facebook": "https://www.facebook.com/p/Al-Hikma-Agro-61575531547813/",
+      "youtube" : "https://www.youtube.com/@AL-HIKMAAGROLIMITED",
+      "whatsapp": "+8801837886250"
     }
   },
   "quickLinks": [
@@ -179,10 +181,10 @@
         "desc": "Expert in supply chain management and international trade operations."
       }
     },
-        "conduct": {
+    "conduct": {
       "title": "Our Code of Conduct",
       "subtitle": "Guided by ethics, responsibility, and sustainability",
-            "integrity": {
+      "integrity": {
         "title": "Integrity",
         "desc": "We conduct all our farming and business practices with honesty, fairness, and transparency."
       },
@@ -325,7 +327,7 @@
     },
     "latestArticles": "Latest Articles",
     "categoryArticles": "{{category}} Articles",
-    "articlesFound": "article{{count, plural, one{} other{s}}} found",
+    "articlesFound": "article {{count, plural, one{} other{s}} found",
     "noArticles": {
       "title": "No articles found",
       "subtitle": "Try adjusting your search terms or category filter."
@@ -538,7 +540,7 @@
       "description": "Get in touch with Al Hikma Agro for organic farming products, partnerships, or inquiries. We’re here to support you worldwide."
     }
   },
-    "terms": {
+  "terms": {
     "title": "Terms of Service – Al Hikma Agro",
     "meta": "Review Al Hikma Agro’s Terms of Service for using our website and purchasing our organic agricultural products responsibly.",
     "heading": "Terms of Service",
@@ -606,42 +608,72 @@
       }
     }
   },
-"digitalHub": {
-  "title": "Digital Hub – Technology for Smarter Organic Farming",
-  "subtitle": "Connecting farmers with digital solutions that improve productivity, sustainability, and organic integrity.",
-  "features": {
-    "marketplace": { "title": "Online Marketplace", "desc": "Sell organic produce directly to consumers, avoiding middlemen." },
-    "mobile": { "title": "Mobile Access", "desc": "Instant access to weather, market prices, and organic farming tips." },
-    "analytics": { "title": "Data & Analytics", "desc": "Monitor soil health, crop growth, and predict harvest outcomes." },
-    "community": { "title": "Farmer Community", "desc": "Join discussions, ask questions, and collaborate on organic methods." },
-    "training": { "title": "Digital Training", "desc": "Step-by-step video courses and guides on sustainable farming." },
-    "organic": { "title": "Organic Certification Support", "desc": "Guidelines and digital tools to help farmers meet organic certification requirements." },
-    "smartFarming": { "title": "Smart Farming Tools", "desc": "Access modern equipment, drones, and apps designed for organic farms." },
-    "iot": { "title": "IoT & Smart Sensors", "desc": "Monitor soil moisture, irrigation, and fertilizer use with smart devices." },
-    "knowledge": { "title": "Knowledge Library", "desc": "Access e-books, articles, and expert advice on organic farming." },
-    "certification": { "title": "Traceability & Safety", "desc": "Blockchain-based systems to ensure food safety and traceability." }
-  },
-  "success": {
-    "title": "Success Stories",
-    "farmer1": {
-      "title": "Rural Farmer in Bangladesh",
-      "desc": "By using the Digital Hub mobile app, Abdul reduced pesticide use by 70% and increased his organic vegetable sales by 40%."
+  "digitalHub": {
+    "title": "Digital Hub – Technology for Smarter Organic Farming",
+    "subtitle": "Connecting farmers with digital solutions that improve productivity, sustainability, and organic integrity.",
+    "features": {
+      "marketplace": {
+        "title": "Online Marketplace",
+        "desc": "Sell organic produce directly to consumers, avoiding middlemen."
+      },
+      "mobile": {
+        "title": "Mobile Access",
+        "desc": "Instant access to weather, market prices, and organic farming tips."
+      },
+      "analytics": {
+        "title": "Data & Analytics",
+        "desc": "Monitor soil health, crop growth, and predict harvest outcomes."
+      },
+      "community": {
+        "title": "Farmer Community",
+        "desc": "Join discussions, ask questions, and collaborate on organic methods."
+      },
+      "training": {
+        "title": "Digital Training",
+        "desc": "Step-by-step video courses and guides on sustainable farming."
+      },
+      "organic": {
+        "title": "Organic Certification Support",
+        "desc": "Guidelines and digital tools to help farmers meet organic certification requirements."
+      },
+      "smartFarming": {
+        "title": "Smart Farming Tools",
+        "desc": "Access modern equipment, drones, and apps designed for organic farms."
+      },
+      "iot": {
+        "title": "IoT & Smart Sensors",
+        "desc": "Monitor soil moisture, irrigation, and fertilizer use with smart devices."
+      },
+      "knowledge": {
+        "title": "Knowledge Library",
+        "desc": "Access e-books, articles, and expert advice on organic farming."
+      },
+      "certification": {
+        "title": "Traceability & Safety",
+        "desc": "Blockchain-based systems to ensure food safety and traceability."
+      }
     },
-    "farmer2": {
-      "title": "Women Farmers’ Collective",
-      "desc": "A group of women farmers connected via the Digital Hub community to share resources and now collectively supply fresh organic produce to Dhaka markets."
-    }
-  },
-  "future": {
-    "title": "Future Vision",
-    "desc": "We envision a world where every farmer, regardless of location, can access the tools, knowledge, and markets needed to thrive with organic, sustainable farming."
-  },
-  "cta": {
-    "title": "Join the Digital Hub Today",
-    "desc": "Be part of the farming revolution — connect, learn, and grow with digital tools built for you.",
-    "button": "Get Started"
-  },
-   "socials": {
+    "success": {
+      "title": "Success Stories",
+      "farmer1": {
+        "title": "Rural Farmer in Bangladesh",
+        "desc": "By using the Digital Hub mobile app, Abdul reduced pesticide use by 70% and increased his organic vegetable sales by 40%."
+      },
+      "farmer2": {
+        "title": "Women Farmers’ Collective",
+        "desc": "A group of women farmers connected via the Digital Hub community to share resources and now collectively supply fresh organic produce to Dhaka markets."
+      }
+    },
+    "future": {
+      "title": "Future Vision",
+      "desc": "We envision a world where every farmer, regardless of location, can access the tools, knowledge, and markets needed to thrive with organic, sustainable farming."
+    },
+    "cta": {
+      "title": "Join the Digital Hub Today",
+      "desc": "Be part of the farming revolution — connect, learn, and grow with digital tools built for you.",
+      "button": "Get Started"
+    },
+    "socials": {
       "facebook": {
         "title": "Facebook",
         "desc": "Follow us on Facebook for daily updates, events, and farming tips."
@@ -667,7 +699,5 @@
         "desc": "Stay updated with quick news, insights, and farming innovations."
       }
     }
-}
-
-
+  }
 }
