@@ -87,10 +87,10 @@ const Sustainability = () => {
   ]
 
   const impactStats = [
-    { number: '50,000', unit: t("impact.co2.unit"), description: t("impact.co2.desc") },
-    { number: '500+', unit: t("impact.farmers.unit"), description: t("impact.farmers.desc") },
-    { number: '30', unit: t("impact.acres.unit"), description: t("impact.acres.desc") },
-    { number: '25%', unit: t("impact.water.unit"), description: t("impact.water.desc") }
+    { number: t("impact.co2.number"), unit: t("impact.co2.unit"), description: t("impact.co2.desc") },
+    { number: t("impact.farmers.number"), unit: t("impact.farmers.unit"), description: t("impact.farmers.desc") },
+    { number: t("impact.acres.number"), unit: t("impact.acres.unit"), description: t("impact.acres.desc") },
+    { number: t("impact.water.number"), unit: t("impact.water.unit"), description: t("impact.water.desc") }
   ]
 
   return (

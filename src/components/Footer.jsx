@@ -18,13 +18,13 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               {/* <Leaf className="h-8 w-8 text-green-500" /> */}
               <img src="/alhikma-logo.png" alt="logo" className="h-8" />
-              <span className="text-xl font-bold">Al Hikma Agro Ltd</span>
+              <span className="text-xl font-bold">Al-Hikma Agro Limited</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">{company.description}</p>
             <div className="flex space-x-4">
@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">
-              {t("quickLinksTitle", { defaultValue: "Quick Links" })}
+              {t("footer.quickLinksTitle", { defaultValue: "Quick Links" })}
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -73,7 +73,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">
-              {t("contactTitle", { defaultValue: "Contact Info" })}
+              {t("footer.contactTitle", { defaultValue: "Contact Info" })}
             </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">

@@ -36,18 +36,18 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-14 md:h-36">
+        <div className="flex justify-between h-14 md:h-24 lg:h-36">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src='/alhikma-logo.png' alt='logo' className='h-12 md:h-32'/>
+              <img src='/alhikma-logo.png' alt='logo' className='h-12 md:h-20 lg:h-32'/>
             </Link>
           </div>
 
           {/* Right Section */}
           <div className="flex gap-1.5 flex-col justify-center">
             {/* Phone Numbers (desktop only) */}
-            <div className="hidden md:flex items-center justify-end space-x-6 mb-2">
+            <div className="hidden lg:flex items-center justify-end space-x-6 mb-2">
               <a href="tel:+880123456789" className="flex items-center text-gray-700 hover:text-green-600 font-bold">
                 <Phone className="h-5 w-5 mr-2 text-green-600" />
                 01837886250
@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-3.5">
+            <div className="hidden lg:flex items-center space-x-3.5">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
@@ -97,10 +97,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <Button
               variant="ghost"
-              size="sm"
+              size="lg"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700"
             >
@@ -111,7 +111,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {navItems.map((item) => (
                 <Link
@@ -129,7 +129,7 @@ const Navbar = () => {
               ))}
 
               {/* Mobile Language Switch */}
-              <div className="flex space-x-1 mt-3">
+              <div className="flex space-x-2.5 mt-3">
                 <Button
                   variant={i18n.language === 'en' ? 'default' : 'outline'}
                   size="sm"

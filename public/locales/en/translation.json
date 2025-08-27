@@ -84,9 +84,9 @@
   "company": {
     "name": "Al Hikma Agro",
     "description": "Leading provider of premium agricultural products, committed to sustainable farming practices and delivering quality grains, seeds, fruits, and vegetables worldwide.",
-     "social": {
+    "social": {
       "facebook": "https://www.facebook.com/p/Al-Hikma-Agro-61575531547813/",
-      "youtube" : "https://www.youtube.com/@AL-HIKMAAGROLIMITED",
+      "youtube": "https://www.youtube.com/@AL-HIKMAAGROLIMITED",
       "whatsapp": "+8801837886250"
     }
   },
@@ -105,7 +105,9 @@
   "footer": {
     "copyright": "© 2025 Al Hikma Agro. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "contactTitle": "Contact Info",
+    "quickLinksTitle": "Quick Links"
   },
   "about": {
     "title": "About Al Hikma Agro",
@@ -121,6 +123,12 @@
       "tons": "Tons Distributed",
       "years": "Years Experience"
     },
+    "count": {
+      "farms": "500+",
+      "countries": "50+",
+      "tons": "1M+",
+      "years": "15+"
+    },
     "vision": {
       "title": "Our Vision",
       "desc": "To be the world's most trusted agricultural products company, leading the transformation towards sustainable farming practices and ensuring food security for future generations."
@@ -135,22 +143,27 @@
     },
     "milestones": {
       "founded": {
+        "year": "2010",
         "event": "Company Founded",
         "desc": "Al Hikma Agro established with a vision to transform agriculture"
       },
       "expansion": {
+        "year": "2015",
         "event": "International Expansion",
         "desc": "Expanded operations to serve global markets"
       },
       "certification": {
+        "year": "2017",
         "event": "Organic Certification",
         "desc": "Achieved organic certification for sustainable farming practices"
       },
       "digital": {
+        "year": "2020",
         "event": "Digital Transformation",
         "desc": "Implemented advanced technology for supply chain management"
       },
       "carbon": {
+        "year": "2023",
         "event": "Carbon Neutral",
         "desc": "Achieved carbon neutral operations across all facilities"
       }
@@ -160,9 +173,7 @@
       "subtitle": "Our commitment to quality is backed by international certifications",
       "iso": "Quality Management System",
       "haccp": "Hazard Analysis Critical Control Points",
-      "organic": "Organic Certified",
       "organicDesc": "USDA Organic Certification",
-      "fairtrade": "Fair Trade",
       "fairtradeDesc": "Fair Trade Certified Products",
       "globalgap": "Good Agricultural Practices",
       "brc": "British Retail Consortium Standard"
@@ -227,19 +238,23 @@
     "subtitle": "Measurable results from our sustainability initiatives",
     "co2": {
       "unit": "Tons CO₂",
-      "desc": "Reduced annually"
+      "desc": "Reduced annually",
+      "number": "50,000"
     },
     "farmers": {
       "unit": "Farmers",
-      "desc": "Supported globally"
+      "desc": "Supported globally",
+      "number": "500+"
     },
     "acres": {
       "unit": "Acres",
-      "desc": "Under sustainable practices"
+      "desc": "Under sustainable practices",
+      "number": "30"
     },
     "water": {
       "unit": "Reduction",
-      "desc": "In water usage"
+      "desc": "In water usage",
+      "number": "25%"
     }
   },
   "practices": {
@@ -337,35 +352,43 @@
     "posts": {
       "1": {
         "title": "The Future of Sustainable Agriculture: Trends for 2024",
-        "excerpt": "Explore the latest innovations and trends shaping sustainable farming practices worldwide, from precision agriculture to regenerative farming techniques."
+        "excerpt": "Explore the latest innovations and trends shaping sustainable farming practices worldwide, from precision agriculture to regenerative farming techniques.",
+        "author": "Dr. Sarah Johnson"
       },
       "2": {
         "title": "New Organic Certification Program Launched",
-        "excerpt": "Al Hikma Agro announces the launch of our enhanced organic certification program, supporting farmers in transitioning to sustainable practices."
+        "excerpt": "Al Hikma Agro announces the launch of our enhanced organic certification program, supporting farmers in transitioning to sustainable practices.",
+        "author": "Ahmed Al-Hikma"
       },
       "3": {
         "title": "Maximizing Crop Yields with Smart Irrigation",
-        "excerpt": "Learn how modern irrigation technologies can help farmers increase productivity while conserving water resources."
+        "excerpt": "Learn how modern irrigation technologies can help farmers increase productivity while conserving water resources.",
+        "author": "Michael Chen"
       },
       "4": {
         "title": "Global Grain Market Analysis: Q4 2023 Report",
-        "excerpt": "Comprehensive analysis of global grain markets, including price trends, supply chain insights, and future projections."
+        "excerpt": "Comprehensive analysis of global grain markets, including price trends, supply chain insights, and future projections.",
+        "author": "Maria Rodriguez"
       },
       "5": {
         "title": "Introducing Our New Premium Seed Collection",
-        "excerpt": "Discover our latest collection of high-yield, disease-resistant seeds designed for optimal crop performance."
+        "excerpt": "Discover our latest collection of high-yield, disease-resistant seeds designed for optimal crop performance.",
+        "author": "Dr. Sarah Johnson"
       },
       "6": {
         "title": "Carbon Farming: A Path to Climate-Smart Agriculture",
-        "excerpt": "Understanding how carbon farming practices can help mitigate climate change while improving soil health and farm profitability."
+        "excerpt": "Understanding how carbon farming practices can help mitigate climate change while improving soil health and farm profitability.",
+        "author": "Michael Chen"
       },
       "7": {
         "title": "Partnership Announcement: Expanding in Southeast Asia",
-        "excerpt": "Al Hikma Agro announces strategic partnerships to expand our presence in Southeast Asian markets."
+        "excerpt": "Al Hikma Agro announces strategic partnerships to expand our presence in Southeast Asian markets.",
+        "author": "Ahmed Al-Hikma"
       },
       "8": {
         "title": "Pest Management Best Practices for Organic Farms",
-        "excerpt": "Effective strategies for managing pests in organic farming systems without compromising sustainability goals."
+        "excerpt": "Effective strategies for managing pests in organic farming systems without compromising sustainability goals.",
+        "author": "Maria Rodriguez"
       }
     }
   },
@@ -536,10 +559,10 @@
       "description": "Read our blog for insights on organic farming, sustainable practices, healthy food habits, and agricultural innovations."
     },
     "digitalHub": {
-  "title": "Digital Hub | Organic Farming & Agriculture",
-  "description": "Explore Al-Hikma Agro’s Digital Hub – your one-stop space for organic farming, sustainable agriculture, smart farming technology, training, and community support.",
-  "keywords": "organic farming, digital agriculture, sustainable farming, smart farming, IoT agriculture, organic certification, farming community, Al-Hikma Agro"
-},
+      "title": "Digital Hub | Organic Farming & Agriculture",
+      "description": "Explore Al-Hikma Agro’s Digital Hub – your one-stop space for organic farming, sustainable agriculture, smart farming technology, training, and community support.",
+      "keywords": "organic farming, digital agriculture, sustainable farming, smart farming, IoT agriculture, organic certification, farming community, Al-Hikma Agro"
+    },
     "contact": {
       "title": "Contact Us – Al Hikma Agro | Organic Agriculture Solutions",
       "description": "Get in touch with Al Hikma Agro for organic farming products, partnerships, or inquiries. We’re here to support you worldwide."

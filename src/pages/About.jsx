@@ -10,27 +10,27 @@ const About = () => {
 
   const milestones = [
     {
-      year: "2010",
+      year: t("about.milestones.founded.year"),
       event: t("about.milestones.founded.event"),
       description: t("about.milestones.founded.desc"),
     },
     {
-      year: "2015",
+      year: t("about.milestones.expansion.year"),
       event: t("about.milestones.expansion.event"),
       description: t("about.milestones.expansion.desc"),
     },
     {
-      year: "2018",
+      year: t("about.milestones.certification.year"),
       event: t("about.milestones.certification.event"),
       description: t("about.milestones.certification.desc"),
     },
     {
-      year: "2020",
+      year: t("about.milestones.digital.year"),
       event: t("about.milestones.digital.event"),
       description: t("about.milestones.digital.desc"),
     },
     {
-      year: "2023",
+      year: t("about.milestones.carbon.year"),
       event: t("about.milestones.carbon.event"),
       description: t("about.milestones.carbon.desc"),
     },
@@ -39,9 +39,9 @@ const About = () => {
   const certifications = [
     { name: "ISO 9001:2015", description: t("about.cert.iso") },
     { name: "HACCP", description: t("about.cert.haccp") },
-    { name: t("about.cert.organic"), description: t("about.cert.organicDesc") },
+    { name: "Organic Certified", description: t("about.cert.organicDesc") },
     {
-      name: t("about.cert.fairtrade"),
+      name: "Fair Trade",
       description: t("about.cert.fairtradeDesc"),
     },
     { name: "Global GAP", description: t("about.cert.globalgap") },
@@ -91,21 +91,21 @@ const About = () => {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">500+</div>
+                  <div className="text-3xl font-bold text-green-600">{t("about.count.farms")}</div>
                   <div className="text-gray-600">{t("about.stats.farms")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">50+</div>
+                  <div className="text-3xl font-bold text-green-600">{t("about.count.countries")}</div>
                   <div className="text-gray-600">
                     {t("about.stats.countries")}
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">1M+</div>
+                  <div className="text-3xl font-bold text-green-600">{t("about.count.tons")}</div>
                   <div className="text-gray-600">{t("about.stats.tons")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">15+</div>
+                  <div className="text-3xl font-bold text-green-600">{t("about.count.years")}</div>
                   <div className="text-gray-600">{t("about.stats.years")}</div>
                 </div>
               </div>

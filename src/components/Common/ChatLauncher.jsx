@@ -32,7 +32,7 @@ export default function ChatLauncher() {
     <button
       onClick={open}
       aria-label="Open chat"
-      className="fixed hidden bottom-5 right-16 z-50 rounded-2xl px-4 py-3 shadow-lg bg-emerald-600 text-white hover:bg-emerald-700 active:scale-95 transition flex items-center gap-2"
+      className="fixed hidden bottom-5 right-16 z-50 rounded-2xl px-4 py-3 shadow-lg bg-emerald-600 text-white hover:bg-emerald-700 active:scale-95 transition items-center gap-2"
     >
       {/* Chat Icon */}
       <svg
