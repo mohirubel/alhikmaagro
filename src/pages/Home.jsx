@@ -15,7 +15,6 @@ const Home = () => {
         <meta name="keywords" content={t('seo.home.keywords')} />
         <meta httpEquiv="Content-Language" content={i18n.language} />
       </Helmet>
-
       <Hero/>
       <CompanyIntro />
       <FeaturedProducts/>

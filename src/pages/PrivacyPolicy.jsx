@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const PrivacyPolicy = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const sections = t("privacy.sections", { returnObjects: true });
 
@@ -12,6 +12,7 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>{t("privacy.title")}</title>
         <meta name="description" content={t("privacy.meta")} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
       </Helmet>
 
       <h1 className="text-3xl font-bold mb-8">{t("privacy.heading")}</h1>

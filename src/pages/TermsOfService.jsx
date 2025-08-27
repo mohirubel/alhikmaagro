@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const TermsOfService = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
 
   const sections = t("terms.sections", { returnObjects: true });
 
@@ -12,6 +12,7 @@ const TermsOfService = () => {
       <Helmet>
         <title>{t("terms.title")}</title>
         <meta name="description" content={t("terms.meta")} />
+        <meta httpEquiv="Content-Language" content={i18n.language} />
       </Helmet>
 
       <h1 className="text-3xl font-bold mb-8">{t("terms.heading")}</h1>

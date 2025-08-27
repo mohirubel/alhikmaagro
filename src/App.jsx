@@ -17,11 +17,13 @@ import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import DigitalHub from "./pages/DigitalHub";
 import ScrollToTop from "./components/Common/ScrollToTop";
+import ChatLauncher from "./components/Common/ChatLauncher";
 
 function App() {
   return (
     <Router>
     <ScrollToTop />
+    <ChatLauncher />
       <div className="flex flex-col min-h-screen bg-background">
         <Navbar />
         <main className="flex-grow">

@@ -6,7 +6,7 @@ import {
   MapPin,
   Facebook,
   Youtube,
-  MessageCircle 
+  MessageCircle,
 } from "lucide-react";
 
 const Footer = () => {
@@ -46,7 +46,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle  className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -97,7 +97,12 @@ const Footer = () => {
 
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-green-500" />
-                <span className="text-gray-300">{contact.email}</span>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="text-gray-300 hover:text-green-500 transition"
+                >
+                  {contact.email}
+                </a>
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-green-500 mt-1" />

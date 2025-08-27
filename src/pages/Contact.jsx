@@ -264,7 +264,7 @@ const Contact = () => {
                         </h3>
                         {info.details.map((detail, idx) => {
                           if (info.title === t("contactPage.phone")) {
-                            // Phone link
+                            // 📞 Phone link
                             return (
                               <a
                                 key={idx}
@@ -275,7 +275,7 @@ const Contact = () => {
                               </a>
                             );
                           } else if (info.title === t("contactPage.whatsapp")) {
-                            // WhatsApp link
+                            // 💬 WhatsApp link
                             const waNumber = detail.replace(/\D/g, ""); // keep only digits
                             return (
                               <a
@@ -288,8 +288,19 @@ const Contact = () => {
                                 {detail}
                               </a>
                             );
+                          } else if (info.title === t("contactPage.email")) {
+                            // 📧 Email link
+                            return (
+                              <a
+                                key={idx}
+                                href={`mailto:${detail}`}
+                                className="block text-gray-600 hover:text-green-600 transition-colors"
+                              >
+                                {detail}
+                              </a>
+                            );
                           } else {
-                            // Default (email, address, etc.)
+                            // 🏠 Address or others
                             return (
                               <p key={idx} className="text-gray-600">
                                 {detail}

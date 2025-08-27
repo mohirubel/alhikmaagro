@@ -440,7 +440,7 @@ const handlePurchase = (product) => {
           )}
 
           {/* Load More Button */}
-          {sortedProducts.length > 0 && (
+          {/* {sortedProducts.length > 0 && (
             <div className="text-center mt-12">
               <Button
                 variant="outline"
@@ -450,7 +450,7 @@ const handlePurchase = (product) => {
                 {t("buttons.loadMore")}
               </Button>
             </div>
-          )}
+          )} */}
         </div>
       </section>
     </div>

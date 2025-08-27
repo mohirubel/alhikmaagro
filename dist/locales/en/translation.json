@@ -476,7 +476,7 @@
     "placeholderFullName": "Your full name",
     "placeholderEmail": "your.email@example.com",
     "placeholderCompany": "Your company name",
-    "placeholderPhone": "+880178498542..",
+    "placeholderPhone": "0178498542..",
     "placeholderSubject": "What is this regarding?",
     "placeholderMessage": "Please provide details about your inquiry...",
     "sendMessage": "Send Message",
@@ -535,6 +535,11 @@
       "title": "Blog – Organic Farming, Healthy Living & Sustainability",
       "description": "Read our blog for insights on organic farming, sustainable practices, healthy food habits, and agricultural innovations."
     },
+    "digitalHub": {
+  "title": "Digital Hub | Organic Farming & Agriculture",
+  "description": "Explore Al-Hikma Agro’s Digital Hub – your one-stop space for organic farming, sustainable agriculture, smart farming technology, training, and community support.",
+  "keywords": "organic farming, digital agriculture, sustainable farming, smart farming, IoT agriculture, organic certification, farming community, Al-Hikma Agro"
+},
     "contact": {
       "title": "Contact Us – Al Hikma Agro | Organic Agriculture Solutions",
       "description": "Get in touch with Al Hikma Agro for organic farming products, partnerships, or inquiries. We’re here to support you worldwide."
